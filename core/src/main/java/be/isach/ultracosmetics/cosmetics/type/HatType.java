@@ -130,6 +130,12 @@ public class HatType extends CosmeticType<Hat> {
         new HatType("7a59bb0a7a32965b3d90d8eafa899d1835f424509eadd4e6b709ada50b9cf", "Enderman", "&7&oNow I'm here, now I'm there!");
         new HatType("d685e2e906b44647a9cdc8066b106bc50a2c9abf974e69239917fd21a15b4368", "EndermanKing", "&7&oempty");
         new HatType("61affd31efc37ba84f50187394d8688344ccd06cdc926ddfcf2df116986dca9", "Slime", "&7&oempty");
+        new HatType("123fa5a163d4295d3db14ac429f78842ce1b0178f7d27a77e3fdad65c8d74ed6", "MCD-Steve", "&7&oempty");
+        new HatType("a2f71de1fd66e37362cdd86589e9b34e847999e232aa717ebbc86330ffb4f637", "MCD-Alex", "&7&oempty");
+        new HatType("af498ce713d6558c7134d643ce7051414f2f3ab87ad79e40ffd5d47c63dea7a5", "MCD-QuestGiver", "&7&oempty");
+        new HatType("10cd12583f561084e8415401947f65e313218e6e84def5d371d27b6db28f4d16", "MCD-LuxuryMerchant", "&7&oempty");
+        new HatType("e0686a0d939bc9acf1ce1f668d4084e7e64d615553fb1c36f5127b41c8cb7911", "MCD-Necromancer", "&7&oempty");
+        new HatType("3affce65f4236647ecd6d55c127eef8e7e132f43d01432aea360f0b67c8a6677", "MCD-NamelessOne", "&7&oempty");
         new HatType("dba8d8e53d8a5a75770b62cce73db6bab701cc3de4a9b654d213d54af9615", "Mario", "&7&oIt's-a me! Mario!");
         new HatType("ff1533871e49ddab8f1ca82edb1153a5e2ed3764fd1ce029bf829f4b3caac3", "Luigi", "&7&oLuigi time!");
         new HatType("911be759233c74734b211ece555d585a229a399d5a92b3614ab47c046d785", "DonkeyKong", "&7&oempty");
