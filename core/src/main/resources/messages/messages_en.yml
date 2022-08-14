@@ -713,15 +713,60 @@ Hats:
   Enderman:
     Name: '&5&lEnderman'
     Description: '&7&oNow I''m here, now I''m there!'
+  EndermanKing:
+    Name: '&d&lEnderman King'
+    Description: '&7&oempty'
+  Slime:
+    Name: '&a&lSlime'
+    Description: '&7&oempty'
+  MCD-Steve:
+    Name: '&9&lSteve'
+    Description: '&7&oempty'
+  MCD-Alex:
+    Name: '&6&lAlex'
+    Description: '&7&oempty'
+  MCD-QuestGiver:
+    Name: '&5&lQuest Giver'
+    Description: '&7&oempty'
+  MCD-LuxuryMerchant:
+    Name: '&6&lLuxury Merchant'
+    Description: '&7&oempty'
+  MCD-Necromancer:
+    Name: '&b&lNecromancer'
+    Description: '&7&oempty'
+  MCD-NamelessOne:
+    Name: '&2&lNameless One'
+    Description: '&7&oempty'
   Mario:
     Name: '&4&lMario'
     Description: '&7&oIt''s-a me! Mario!'
   Luigi:
     Name: '&2&lLuigi'
     Description: '&7&oLuigi time!'
+  DonkeyKong:
+    Name: '&e&lDonkey Kong'
+    Description: '&7&oempty'
+  DiddyKong:
+    Name: '&c&lDiddy Kong'
+    Description: '&7&oempty'
+  FunkyKong:
+    Name: '&d&lFunky Kong'
+    Description: '&7&oempty'
+  ShyGuyRed:
+    Name: '&4&lRed Shy Guy'
+    Description: '&7&oempty'
+  Link:
+    Name: '&2&lLink'
+    Description: '&7&oempty'
+  Kirby:
+    Name: '&d&lKirby'
+    Description: '&7&oempty'
   Batman:
     Name: '&8&lBatman'
     Description: '&7&oI''m Batman!'
+  Joker:
+    Name: '&2&lJoker'
+    Description: '&7&oempty'
   Chest:
     Name: '&6&lChest'
     Description: '&7&oOpen, and close'
@@ -788,6 +833,174 @@ Hats:
   BrownCrewmate:
     Name: '&8&lBrown Crewmate'
     Description: '&7&oBrown sus!'
+  AshKetchum:
+    Name: '&c&lAsh Ketchum'
+    Description: '&7&oempty'
+  Pikachu:
+    Name: '&e&lPikachu'
+    Description: '&7&oempty'
+  Aladdin:
+    Name: '&5&lAladdin'
+    Description: '&7&oempty'
+  PrincessJasmine:
+    Name: '&6&lPrincess Jasmine'
+    Description: '&7&oempty'
+  Genie:
+    Name: '&9&lGenie'
+    Description: '&7&oempty'
+  Moana:
+    Name: '&a&lMoana'
+    Description: '&7&oempty'
+  Claptrap:
+    Name: '&6&lClaptrap'
+    Description: '&7&oempty'
+  Sonic:
+    Name: '&9&lSonic'
+    Description: '&7&oempty'
+  HogRider:
+    Name: '&e&lHog Rider'
+    Description: '&7&oempty'
+  FrogPrince:
+    Name: '&2&lFrog Prince'
+    Description: '&7&oempty'
+  PussInBoots:
+    Name: '&6&lPuss in Boots'
+    Description: '&7&oempty'
+  Pinocchio:
+    Name: '&7&lPinocchio'
+    Description: '&7&oempty'
+  AliceWonderland:
+    Name: '&e&lAlice'
+    Description: '&7&oempty'
+  TheMadHatter:
+    Name: '&5&lThe Mad Hatter'
+    Description: '&7&oempty'
+  Notch:
+    Name: '&f&lNotch'
+    Description: '&7&oempty'
+  KitsuneMask:
+    Name: '&c&lKitsune Mask'
+    Description: '&7&oempty'
+  TomNook:
+    Name: '&3&lTom Nook'
+    Description: '&7&oempty'
+  Totoro:
+    Name: '&a&lTotoro'
+    Description: '&7&oempty'
+  NoFace:
+    Name: '&5&lNo-Face'
+    Description: '&7&oempty'
+  Goblin:
+    Name: '&9&lGoblin'
+    Description: '&7&oempty'
+  Unicorn:
+    Name: '&d&lUnicorn'
+    Description: '&7&oempty'
+  Ogre:
+    Name: '&2&lOgre'
+    Description: '&7&oempty'
+  GreenDragon:
+    Name: '&a&lGreen Dragon'
+    Description: '&7&oempty'
+  MrMonopoly:
+    Name: '&f&lMr. Monopoly'
+    Description: '&7&oempty'
+  2B:
+    Name: '&f&l2B'
+    Description: '&7&oempty'
+  Plankton:
+    Name: '&2&lPlankton'
+    Description: '&7&oempty'
+  GigaChad:
+    Name: '&7&lGigaChad'
+    Description: '&7&oempty'
+  SpiderMan:
+    Name: '&4&lSpider-Man'
+    Description: '&7&oempty'
+  IronMan:
+    Name: '&c&lIron Man'
+    Description: '&7&oempty'
+  Deadpool:
+    Name: '&c&lDeadpool'
+    Description: '&7&oempty'
+  HarryPotter:
+    Name: '&6&lHarry Potter'
+    Description: '&7&oempty'
+  AlbusDumbledore:
+    Name: '&3&lAlbus Dumbledore'
+    Description: '&7&oempty'
+  Hagrid:
+    Name: '&2&lHagrid'
+    Description: '&7&oempty'
+  LunaLovegood:
+    Name: '&d&lLuna Lovegood'
+    Description: '&7&oempty'
+  DarthVader:
+    Name: '&4&lDarth Vader'
+    Description: '&7&oempty'
+  R2D2:
+    Name: '&9&lR2-D2'
+    Description: '&7&oempty'
+  BabyYoda:
+    Name: '&2&lBaby Yoda'
+    Description: '&7&oempty'
+  Frodo:
+    Name: '&b&lFrodo'
+    Description: '&7&oempty'
+  Bastion:
+    Name: '&7&lBastion'
+    Description: '&7&oempty'
+  DVa:
+    Name: '&d&lD.Va'
+    Description: '&7&oempty'
+  Tracer:
+    Name: '&6&lTracer'
+    Description: '&7&oempty'
+  GeraltOfRivia:
+    Name: '&f&lGeralt of Rivia'
+    Description: '&7&oempty'
+  Ciri:
+    Name: '&f&lCiri'
+    Description: '&7&oempty'
+  TrissMerigold:
+    Name: '&c&lTriss Merigold'
+    Description: '&7&oempty'
+  LaraCroft:
+    Name: '&3&lLara Croft'
+    Description: '&7&oempty'
+  MaxCaulfield:
+    Name: '&5&lMax Caulfield'
+    Description: '&7&oempty'
+  ChloePrice:
+    Name: '&9&lChloe Price'
+    Description: '&7&oempty'
+  BigSmoke:
+    Name: '&2&lBig Smoke'
+    Description: '&7&oempty'
+  Naruto:
+    Name: '&e&lNaruto'
+    Description: '&7&oempty'
+  Tanjiro:
+    Name: '&b&lTanjiro'
+    Description: '&7&oempty'
+  Nezuko:
+    Name: '&d&lNezuko'
+    Description: '&7&oempty'
+  Zenitsu:
+    Name: '&e&lZenitsu'
+    Description: '&7&oempty'
+  Venti:
+    Name: '&a&lVenti'
+    Description: '&7&oempty'
+  Zhongli:
+    Name: '&6&lZhongli'
+    Description: '&7&oempty'
+  Megaman:
+    Name: '&9&lMegaman'
+    Description: '&7&oempty'
+  MasterRoshi:
+    Name: '&6&lMaster Roshi'
+    Description: '&7&oempty'
   Bread:
     Name: '&f&lBread'
     Description: '&7&oFreshly baked'
