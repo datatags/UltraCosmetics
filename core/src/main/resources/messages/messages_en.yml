@@ -707,6 +707,15 @@ Hats:
   Pig:
     Name: '&d&lPig'
     Description: '&7&oOink Oink!'
+  Cow:
+    Name: '&a&lCow'
+    Description: '&7&oempty'
+  Mooshroom:
+    Name: '&c&lMooshroom'
+    Description: '&7&oempty'
+  BrownMooshroom:
+    Name: '&b&lBrown Mooshroom'
+    Description: '&7&oempty'
   Golem:
     Name: '&7&lGolem'
     Description: '&7&oI''m your guard.'
@@ -718,6 +727,69 @@ Hats:
     Description: '&7&oempty'
   Slime:
     Name: '&a&lSlime'
+    Description: '&7&oempty'
+  Creeper:
+    Name: '&2&lCreeper'
+    Description: '&7&oempty'
+  Skeleton:
+    Name: '&7&lSkeleton'
+    Description: '&7&oempty'
+  Zombie:
+    Name: '&2&lZombie'
+    Description: '&7&oempty'
+  Strider:
+    Name: '&c&lStrider'
+    Description: '&7&oempty'
+  WitherSkeleton:
+    Name: '&7&lWither Skeleton'
+    Description: '&7&oempty'
+  Ghast:
+    Name: '&f&lGhast'
+    Description: '&7&oempty'
+  Warden:
+    Name: '&3&lWarden'
+    Description: '&7&oempty'
+  Witch:
+    Name: '&5&lWitch'
+    Description: '&7&oempty'
+  FletcherVillager:
+    Name: '&a&lFletcher Villager'
+    Description: '&7&oempty'
+  LibrarianVillager:
+    Name: '&6&lLibrarian Villager'
+    Description: '&7&oempty'
+  Bee:
+    Name: '&e&lBee'
+    Description: '&7&oempty'
+  Fox:
+    Name: '&6&lFox'
+    Description: '&7&oempty'
+  SnowFox:
+    Name: '&f&lSnow Fox'
+    Description: '&7&oempty'
+  Ocelot:
+    Name: '&e&lOcelot'
+    Description: '&7&oempty'
+  Frog:
+    Name: '&2&lFrog'
+    Description: '&7&oempty'
+  AxolotlBlue:
+    Name: '&9&lBlue Axolotl'
+    Description: '&7&oempty'
+  SeaTurtle:
+    Name: '&a&lSea Turtle'
+    Description: '&7&oempty'
+  Clownfish:
+    Name: '&6&lClownfish'
+    Description: '&7&oempty'
+  BlackCat:
+    Name: '&2&lBlack Cat'
+    Description: '&7&oempty'
+  Allay:
+    Name: '&b&lAllay'
+    Description: '&7&oempty'
+  Bat:
+    Name: '&5&lBat'
     Description: '&7&oempty'
   MCD-Steve:
     Name: '&9&lSteve'
@@ -1000,6 +1072,21 @@ Hats:
     Description: '&7&oempty'
   MasterRoshi:
     Name: '&6&lMaster Roshi'
+    Description: '&7&oempty'
+  Heavy:
+    Name: '&7&lHeavy'
+    Description: '&7&oempty'
+  BlueSpy:
+    Name: '&9&lBlue Spy'
+    Description: '&7&oempty'
+  Engineer:
+    Name: '&e&lEngineer'
+    Description: '&7&oempty'
+  Kratos:
+    Name: '&c&lKratos'
+    Description: '&7&oempty'
+  Teemo:
+    Name: '&2&lTeemo'
     Description: '&7&oempty'
   Bread:
     Name: '&f&lBread'
