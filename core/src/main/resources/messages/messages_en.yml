@@ -727,7 +727,7 @@ Hats:
     Description: '&7&oempty'
   MCD-QuestGiver:
     Name: '&5&lQuest Giver'
-    Description: '&7&oempty'
+    Description: '&7&oI have a quest for you.'
   MCD-LuxuryMerchant:
     Name: '&6&lLuxury Merchant'
     Description: '&7&oempty'
