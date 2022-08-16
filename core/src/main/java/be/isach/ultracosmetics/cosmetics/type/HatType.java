@@ -149,7 +149,7 @@ public class HatType extends CosmeticType<Hat> {
         new HatType("cbb214a348529a0979574b87b06a480cc6177810f79491ce983f16dc3d844662", "Ocelot", "&7&oempty");
         new HatType("51a88b69d82dbcc85f00cff8703705f9408bcdd3a61cefbf67aa5efee5d77f30", "Frog", "&7&oempty");
         new HatType("7595819359c7ed9e979bd53a49b2861620232d6a87eed70687ccd0bf0d3ce8f3", "AxolotlBlue", "&7&oempty");
-        new HatType("0a4050e7aacc4539202658fdc339dd182d7e322f9fbcc4d5f99b5718a", "SeaTurtle", "&7&oempty");
+        new HatType("0a4050e7aacc4539202658fdc339dd182d7e322f9fbcc4d5f99b5718a", "Turtle", "&7&oempty");
         new HatType("4b953e4d3dfa1c622f30c4482d9a726ea12592134f1e3bc79e0c0c5d84c36", "Clownfish", "&7&oempty");
         new HatType("68c2f1f7e8cd6b00d30f0edaeefce38e889173c30c701fac0da860e0a2125ec8", "BlackCat", "&7&oempty");
         new HatType("e50294a1747310f104124c6373cc639b712baa57b7d926297b645188b7bb9ab9", "Allay", "&7&oempty");

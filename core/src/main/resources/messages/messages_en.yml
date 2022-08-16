@@ -776,8 +776,8 @@ Hats:
   AxolotlBlue:
     Name: '&9&lBlue Axolotl'
     Description: '&7&oempty'
-  SeaTurtle:
-    Name: '&a&lSea Turtle'
+  Turtle:
+    Name: '&a&lTurtle'
     Description: '&7&oempty'
   Clownfish:
     Name: '&6&lClownfish'
