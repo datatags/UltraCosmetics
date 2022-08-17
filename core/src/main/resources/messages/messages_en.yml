@@ -838,7 +838,7 @@ Hats:
     Description: '&7&oI''m Batman!'
   Joker:
     Name: '&2&lJoker'
-    Description: '&7&oempty'
+    Description: '&7&oWhy so serious?'
   Chest:
     Name: '&6&lChest'
     Description: '&7&oOpen, and close'
@@ -907,10 +907,10 @@ Hats:
     Description: '&7&oBrown sus!'
   AshKetchum:
     Name: '&c&lAsh Ketchum'
-    Description: '&7&oempty'
+    Description: '&7&oGotta catch ''em all!'
   Pikachu:
     Name: '&e&lPikachu'
-    Description: '&7&oempty'
+    Description: '&7&oPika pika'
   Aladdin:
     Name: '&5&lAladdin'
     Description: '&7&oempty'
@@ -988,7 +988,9 @@ Hats:
     Description: '&7&oempty'
   SpiderMan:
     Name: '&4&lSpider-Man'
-    Description: '&7&oempty'
+    Description: |-
+      &7&oRemember, with great power
+      &7&ocomes great responsibility.
   IronMan:
     Name: '&c&lIron Man'
     Description: '&7&oempty'
@@ -997,16 +999,16 @@ Hats:
     Description: '&7&oempty'
   HarryPotter:
     Name: '&6&lHarry Potter'
-    Description: '&7&oempty'
+    Description: '&7&oI love magic!'
   AlbusDumbledore:
     Name: '&3&lAlbus Dumbledore'
     Description: '&7&oempty'
   Hagrid:
     Name: '&2&lHagrid'
-    Description: '&7&oempty'
+    Description: '&7&oYou''re a wizard, Harry!'
   LunaLovegood:
     Name: '&d&lLuna Lovegood'
-    Description: '&7&oempty'
+    Description: '&7&oYou''re just as sane as I am.'
   DarthVader:
     Name: '&4&lDarth Vader'
     Description: '&7&oempty'
@@ -1075,13 +1077,13 @@ Hats:
     Description: '&7&oempty'
   Heavy:
     Name: '&7&lHeavy'
-    Description: '&7&oempty'
+    Description: '&7&oWe make good team!'
   BlueSpy:
     Name: '&9&lBlue Spy'
-    Description: '&7&oempty'
+    Description: '&7&oSurprise!'
   Engineer:
     Name: '&e&lEngineer'
-    Description: '&7&oempty'
+    Description: '&7&oI built that.'
   Kratos:
     Name: '&c&lKratos'
     Description: '&7&oempty'
