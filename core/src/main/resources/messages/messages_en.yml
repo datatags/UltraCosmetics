@@ -829,7 +829,9 @@ Hats:
     Description: '&7&oempty'
   Link:
     Name: '&2&lLink'
-    Description: '&7&oempty'
+    Description: |-
+      &7&oIt's dangerous to
+      &7&ogo alone! Take this.
   Kirby:
     Name: '&d&lKirby'
     Description: '&7&oempty'
@@ -955,7 +957,7 @@ Hats:
     Description: '&7&oempty'
   TomNook:
     Name: '&3&lTom Nook'
-    Description: '&7&oempty'
+    Description: '&7&oYou owe me 1 million bells.'
   Totoro:
     Name: '&a&lTotoro'
     Description: '&7&oempty'
@@ -982,7 +984,7 @@ Hats:
     Description: '&7&oempty'
   Plankton:
     Name: '&2&lPlankton'
-    Description: '&7&oempty'
+    Description: '&7&oI need the secret formula!'
   GigaChad:
     Name: '&7&lGigaChad'
     Description: '&7&oempty'
@@ -1026,7 +1028,7 @@ Hats:
     Description: '&7&oempty'
   DVa:
     Name: '&d&lD.Va'
-    Description: '&7&oempty'
+    Description: '&7&oMEKA activated!'
   Tracer:
     Name: '&6&lTracer'
     Description: '&7&oempty'
