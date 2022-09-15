@@ -623,6 +623,10 @@ Pets:
     menu-name: '&2&lCave Spider'
     entity-displayname: '&l%playername%''s Cave Spider'
     Description: '&7&oA Spider, but poisonous!'
+  Dolphin:
+    menu-name: '&b&lDolphin'
+    entity-displayname: '&l%playername%''s Dolphin'
+    Description: '&7&oTODO'
   Equip: '%prefix% &9You spawned %petname%'
   Unequip: '%prefix% &9You despawned %petname%'
 Morphs:
