@@ -106,7 +106,7 @@ public final class PetType extends CosmeticEntType<Pet> {
         new PetType("Mooshroom", XMaterial.RED_MUSHROOM, EntityType.MUSHROOM_COW, PetMooshroom.class);
         new PetType("Dog", XMaterial.BONE, EntityType.WOLF, PetDog.class);
         new PetType("Chick", XMaterial.EGG, EntityType.CHICKEN, PetChick.class);
-        new PetType("Pumpling", XMaterial.PUMPKIN, EntityType.ZOMBIE, UltraCosmeticsData.get().getVersionManager().getPets().getPumplingClass());
+        new PetType("Pumpling", XMaterial.PUMPKIN, EntityType.ZOMBIE, UltraCosmeticsData.get().getVersionManager().getModule().getPumplingClass());
         new PetType("ChristmasElf", XMaterial.BEACON, EntityType.VILLAGER, PetChristmasElf.class);
         new PetType("IronGolem", XMaterial.IRON_INGOT, EntityType.IRON_GOLEM, PetIronGolem.class);
         new PetType("Snowman", XMaterial.SNOWBALL, EntityType.SNOWMAN, PetSnowman.class);

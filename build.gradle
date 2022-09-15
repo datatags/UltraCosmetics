@@ -91,7 +91,7 @@ subprojects { subproj ->
         maven {
             url 'https://repo.rosewooddev.io/repository/public/'
         }
-        
+
         // Spigot
         maven {
             url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
@@ -100,6 +100,11 @@ subprojects { subproj ->
         // WorldGuard
         maven {
             url "https://maven.enginehub.org/repo/"
+        }
+
+        // AnvilGUI
+        maven {
+            url "https://repo.codemc.io/repository/maven-snapshots/"
         }
 
         // Vault

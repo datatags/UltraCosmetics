@@ -134,7 +134,7 @@ public class UltraCosmetics extends JavaPlugin {
     /**
      * Manages WorldGuard flags.
      */
-    private WorldGuardManager worldGuardManager = new WorldGuardManager();
+    private WorldGuardManager worldGuardManager = new WorldGuardManager(this);
 
     private boolean legacyMessagePrinted = false;
     private boolean enableFinished = false;
@@ -165,7 +165,7 @@ public class UltraCosmetics extends JavaPlugin {
         // Not using isPluginEnabled() because WorldGuard should be
         // loaded but not yet enabled when registering flags
         if (worldGuardIntegration && getServer().getPluginManager().getPlugin("WorldGuard") != null) {
-            worldGuardManager.register(this);
+            worldGuardManager.register();
         }
     }
 
@@ -284,7 +284,7 @@ public class UltraCosmetics extends JavaPlugin {
         }
 
         // Set up WorldGuard if needed.
-        setupWorldGuard();
+        worldGuardManager.registerPhase2();
 
         // Set up economy if needed.
         setupEconomy();
@@ -401,21 +401,6 @@ public class UltraCosmetics extends JavaPlugin {
             activeProblems.add(Problem.PERMISSION_COMMAND_NOT_SET);
         }
         permissionProvider = new PermissionCommand();
-    }
-
-    private void setupWorldGuard() {
-        if (worldGuardManager != null) {
-            if (!Bukkit.getPluginManager().isPluginEnabled("WorldGuard")) {
-                getSmartLogger().write(LogLevel.ERROR, "WorldGuard is not enabled yet! Is WorldGuard up to date? Is another plugin interfering with the load order?");
-                getSmartLogger().write(LogLevel.ERROR, "WorldGuard support will be disabled.");
-                activeProblems.add(Problem.WORLDGUARD_HOOK_FAILURE);
-                worldGuardManager = null;
-                return;
-            }
-            worldGuardManager.registerPhase2();
-            getSmartLogger().write();
-            getSmartLogger().write("WorldGuard custom flags enabled");
-        }
     }
 
     private void setupMetrics() {

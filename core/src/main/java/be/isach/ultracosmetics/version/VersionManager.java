@@ -1,15 +1,11 @@
 package be.isach.ultracosmetics.version;
 
 import be.isach.ultracosmetics.UltraCosmeticsData;
-import be.isach.ultracosmetics.cosmetics.pets.APlayerFollower;
-import be.isach.ultracosmetics.cosmetics.pets.Pet;
 import be.isach.ultracosmetics.util.ReflectionUtils;
 import be.isach.ultracosmetics.util.ServerVersion;
 
 import org.bukkit.World;
-import org.bukkit.entity.Player;
 
-import java.lang.reflect.Constructor;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -27,15 +23,11 @@ public class VersionManager {
     private IAncientUtil ancientUtil;
     private IFireworkFactory fireworkFactory;
     private Mounts mounts;
-    private IPets pets;
-    private IMorphs morphs;
-    private Constructor<? extends APlayerFollower> playerFollowerConstructor;
 
     public VersionManager(ServerVersion serverVersion) {
         this.serverVersion = serverVersion;
     }
 
-    @SuppressWarnings("unchecked")
     public void load() throws ReflectiveOperationException {
         if (serverVersion == ServerVersion.v1_8) {
             ancientUtil = loadModule("AncientUtil");
@@ -46,10 +38,6 @@ public class VersionManager {
         entityUtil = loadModule("EntityUtil");
         mounts = new Mounts();
         fireworkFactory = loadModule("FireworkFactory");
-        pets = loadModule("Pets");
-        morphs = loadModule("Morphs");
-        playerFollowerConstructor = (Constructor<? extends APlayerFollower>) ReflectionUtils.getConstructor(Class.forName(PACKAGE + "." + serverVersion.getNmsVersion() + ".pets.PlayerFollower"), Pet.class, Player.class);
-        playerFollowerConstructor.setAccessible(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -73,34 +61,8 @@ public class VersionManager {
         return mounts;
     }
 
-    public APlayerFollower newPlayerFollower(Pet pet, Player player) {
-        try {
-            return playerFollowerConstructor.newInstance(pet, player);
-        } catch (ReflectiveOperationException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public IPets getPets() {
-        return pets;
-    }
-
-    public IMorphs getMorphs() {
-        return morphs;
-    }
-
     public IModule getModule() {
         return module;
-    }
-
-    public IAnvilWrapper getAnvilWrapper() {
-        try {
-            return loadModule("AnvilWrapper");
-        } catch (ReflectiveOperationException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public int getWorldMinHeight(World world) {

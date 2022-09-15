@@ -27,10 +27,16 @@ dependencies {
     implementation 'org.bstats:bstats-bukkit:3.0.0'
     compileOnly 'net.luckperms:api:5.4'
     implementation 'com.zaxxer:HikariCP:4.0.3'
+    implementation 'net.wesjd:anvilgui:1.5.3-SNAPSHOT'
+    implementation 'com.github.GamerCoder215.MobChip:mobchip-bukkit:1.5.0'
 }
 shadowJar {
     // removes unused classes in 'implementation' path dependencies
-    minimize()
+    minimize {
+        // Loads classes reflectively
+        exclude(dependency('net.wesjd:anvilgui:.*'))
+        exclude(dependency('com.github.GamerCoder215.MobChip:.*:.*'))
+    }
     def path = 'be.isach.ultracosmetics.shaded'
     // XParticle is big and not required so don't shade it.
     // It's not removed by minimize() because it's on the API path I guess?
@@ -38,4 +44,6 @@ shadowJar {
     relocate ('com.zaxxer.hikari', path + '.hikari')
     relocate ('com.cryptomorin.xseries', path + '.xseries')
     relocate ('org.bstats', path + '.metrics')
+    relocate ('net.wesjd', path + '.anvilgui')
+    relocate ('me.gamercoder215.mobchip', path + '.mobchip')
 }

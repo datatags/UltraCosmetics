@@ -6,8 +6,10 @@ import be.isach.ultracosmetics.config.MessageManager;
 import be.isach.ultracosmetics.cosmetics.Category;
 import be.isach.ultracosmetics.util.Problem;
 import be.isach.ultracosmetics.util.ServerVersion;
+import be.isach.ultracosmetics.util.SmartLogger;
 import be.isach.ultracosmetics.util.SmartLogger.LogLevel;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
@@ -15,10 +17,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Set;
 
 public class WorldGuardManager {
-    protected boolean registered = false;
+
+    private final UltraCosmetics ultraCosmetics;
     private IFlagManager flagManager;
 
-    public void register(UltraCosmetics ultraCosmetics) {
+    public WorldGuardManager(UltraCosmetics ultraCosmetics) {
+        this.ultraCosmetics = ultraCosmetics;
+    }
+
+    public void register() {
         String path = "be.isach.ultracosmetics.worldguard.";
         if (!UltraCosmeticsData.get().getServerVersion().isAtLeast(ServerVersion.v1_13)) {
             path += "legacy.";
@@ -42,7 +49,17 @@ public class WorldGuardManager {
     }
 
     public void registerPhase2() {
+        if (flagManager == null) return;
+        SmartLogger log = ultraCosmetics.getSmartLogger();
+        if (!Bukkit.getPluginManager().isPluginEnabled("WorldGuard")) {
+            log.write(LogLevel.ERROR, "WorldGuard is not enabled yet! Is WorldGuard up to date? Is another plugin interfering with the load order?");
+            log.write(LogLevel.ERROR, "WorldGuard support will be disabled.");
+            UltraCosmeticsData.get().getPlugin().addProblem(Problem.WORLDGUARD_HOOK_FAILURE);
+            return;
+        }
         flagManager.registerPhase2();
+        log.write();
+        log.write("WorldGuard custom flags enabled");
     }
 
     public boolean areCosmeticsAllowedHere(Player player, Category category) {

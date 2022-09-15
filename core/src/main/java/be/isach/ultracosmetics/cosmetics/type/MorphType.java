@@ -102,7 +102,7 @@ public class MorphType extends CosmeticType<Morph> {
         new MorphType("Slime", XMaterial.SLIME_BALL, DisguiseType.SLIME, MorphSlime.class);
         new MorphType("Creeper", XMaterial.GUNPOWDER, DisguiseType.CREEPER, MorphCreeper.class);
         new MorphType("Snowman", XMaterial.SNOWBALL, DisguiseType.SNOWMAN, MorphSnowman.class);
-        new MorphType("ElderGuardian", XMaterial.PRISMARINE_CRYSTALS, DisguiseType.ELDER_GUARDIAN, UltraCosmeticsData.get().getVersionManager().getMorphs().getElderGuardianClass());
+        new MorphType("ElderGuardian", XMaterial.PRISMARINE_CRYSTALS, DisguiseType.ELDER_GUARDIAN, UltraCosmeticsData.get().getVersionManager().getModule().getElderGuardianClass());
         new MorphType("Cow", XMaterial.MILK_BUCKET, DisguiseType.COW, MorphCow.class);
         new MorphType("Mooshroom", XMaterial.RED_MUSHROOM, DisguiseType.MUSHROOM_COW, MorphMooshroom.class);
         new MorphType("Villager", XMaterial.EMERALD, DisguiseType.VILLAGER, MorphVillager.class);

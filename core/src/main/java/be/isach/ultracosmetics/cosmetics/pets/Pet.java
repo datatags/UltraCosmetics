@@ -22,6 +22,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Tameable;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -35,6 +36,9 @@ import com.cryptomorin.xseries.XMaterial;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import me.gamercoder215.mobchip.ai.EntityAI;
+import me.gamercoder215.mobchip.bukkit.BukkitBrain;
 
 /**
  * Represents an instance of a pet summoned by a player.
@@ -54,11 +58,6 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
     protected ArmorStand armorStand;
 
     /**
-     * Task that forces pets to follow player
-     */
-    protected final APlayerFollower followTask;
-
-    /**
      * The {@link org.bukkit.inventory.ItemStack ItemStack} this pet drops, null if none.
      * Sometimes modified before dropping to change what is dropped
      */
@@ -67,7 +66,6 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
     public Pet(UltraPlayer owner, PetType petType, UltraCosmetics ultraCosmetics, ItemStack dropItem) {
         super(owner, petType, ultraCosmetics);
         this.dropItem = dropItem;
-        this.followTask = UltraCosmeticsData.get().getVersionManager().newPlayerFollower(this, getPlayer());
     }
 
     public Pet(UltraPlayer owner, PetType petType, UltraCosmetics ultraCosmetics, XMaterial dropItem) {
@@ -87,7 +85,9 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
         entity = spawnEntity();
         EntitySpawningManager.setBypass(false);
 
-        UltraCosmeticsData.get().getVersionManager().getEntityUtil().clearPathfinders(entity);
+        EntityAI ai = BukkitBrain.getBrain((Mob) entity).getGoalAI();
+        ai.clear();
+        ai.put(new PetPathfinder((Mob) entity, getPlayer()), 0);
 
         if (entity instanceof Ageable) {
             Ageable ageable = (Ageable) entity;
@@ -152,7 +152,7 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
         if (getOwner().isOnline() && getOwner().getCurrentPet() == this) {
             onUpdate();
 
-            followTask.run();
+            // followTask.run();
         } else {
             clear();
         }
@@ -173,10 +173,6 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
 
         // Clear items.
         items.clear();
-    }
-
-    public APlayerFollower getFollowTask() {
-        return followTask;
     }
 
     public ArmorStand getArmorStand() {

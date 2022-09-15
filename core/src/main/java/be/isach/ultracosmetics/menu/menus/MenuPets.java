@@ -11,7 +11,6 @@ import be.isach.ultracosmetics.menu.PurchaseData;
 import be.isach.ultracosmetics.mysql.MySqlConnectionManager;
 import be.isach.ultracosmetics.player.UltraPlayer;
 import be.isach.ultracosmetics.util.ItemFactory;
-import be.isach.ultracosmetics.version.AnvilGUI;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -22,6 +21,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import com.cryptomorin.xseries.XMaterial;
 
 import java.util.List;
+
+import net.wesjd.anvilgui.AnvilGUI;
 
 /**
  * Pet {@link be.isach.ultracosmetics.menu.Menu Menu}.
