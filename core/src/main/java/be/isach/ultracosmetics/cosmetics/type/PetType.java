@@ -159,6 +159,7 @@ public final class PetType extends CosmeticEntType<Pet> {
             new PetType("Salmon", XMaterial.SALMON_BUCKET, EntityType.SALMON, PetSalmon.class);
             new PetType("TropicalFish", XMaterial.TROPICAL_FISH_BUCKET, EntityType.TROPICAL_FISH, PetTropicalFish.class);
             new PetType("Turtle", XMaterial.TURTLE_HELMET, EntityType.TURTLE, PetTurtle.class);
+            new PetType("Dolphin", XMaterial.RAW_COD, EntityType.DOLPHIN, PetDolphin.class);
         case v1_12:
             new PetType("Parrot", XMaterial.COOKIE, EntityType.PARROT, PetParrot.class);
         case v1_11:
