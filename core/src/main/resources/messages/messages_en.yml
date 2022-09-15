@@ -627,6 +627,10 @@ Pets:
     menu-name: '&b&lDolphin'
     entity-displayname: '&l%playername%''s Dolphin'
     Description: '&7&oTODO'
+  Spider:
+    menu-name: '&0&lSpider'
+    entity-displayname: '&l%playername%''s Spider'
+    Description: '&7&oYour friendly neighborhood Spider!'
   Equip: '%prefix% &9You spawned %petname%'
   Unequip: '%prefix% &9You despawned %petname%'
 Morphs:
