@@ -619,6 +619,10 @@ Pets:
     menu-name: '&1&lWandering Trader'
     entity-displayname: '&l%playername%''s Wandering Trader'
     Description: '&7&oWanders around trying to sell his stuff!'
+  CaveSpider:
+    menu-name: '&2&lCave Spider'
+    entity-displayname: '&l%playername%''s Cave Spider'
+    Description: '&7&oA Spider, but poisonous!'
   Equip: '%prefix% &9You spawned %petname%'
   Unequip: '%prefix% &9You despawned %petname%'
 Morphs:
