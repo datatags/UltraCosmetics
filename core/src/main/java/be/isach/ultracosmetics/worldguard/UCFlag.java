@@ -3,8 +3,8 @@ package be.isach.ultracosmetics.worldguard;
 import com.sk89q.worldguard.protection.flags.StateFlag;
 
 public enum UCFlag {
-    COSMETICS(new StateFlag("uc-treasurechest", true)),
-    TREASURE(new StateFlag("uc-cosmetics", true)),
+    COSMETICS(new StateFlag("uc-cosmetics", true)),
+    TREASURE(new StateFlag("uc-treasurechest", true)),
     AFFECT_PLAYERS(new StateFlag("uc-affect-players", true)),
     ;
 
