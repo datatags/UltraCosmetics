@@ -1,10 +1,5 @@
 package be.isach.ultracosmetics.player.profile;
 
-import java.util.UUID;
-import java.util.Map.Entry;
-
-import org.bukkit.Bukkit;
-
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.config.SettingsManager;
@@ -17,11 +12,17 @@ import be.isach.ultracosmetics.cosmetics.type.PetType;
 import be.isach.ultracosmetics.cosmetics.type.SuitType;
 import be.isach.ultracosmetics.player.UltraPlayer;
 
+import org.bukkit.Bukkit;
+
+import java.util.Map.Entry;
+import java.util.UUID;
+
 public abstract class CosmeticsProfile {
     protected final UltraPlayer ultraPlayer;
     protected final UUID uuid;
     protected final UltraCosmetics ultraCosmetics;
     protected final PlayerData data;
+
     public CosmeticsProfile(UltraPlayer ultraPlayer, UltraCosmetics ultraCosmetics) {
         this.ultraPlayer = ultraPlayer;
         this.uuid = ultraPlayer.getUUID();
@@ -29,12 +30,17 @@ public abstract class CosmeticsProfile {
         this.data = new PlayerData(uuid);
         Bukkit.getScheduler().runTaskAsynchronously(ultraCosmetics, () -> {
             load();
-            if (!UltraCosmeticsData.get().areCosmeticsProfilesEnabled()) return;
+            if (!shouldLoadCosmetics()) return;
             Bukkit.getScheduler().runTask(ultraCosmetics, () -> equip());
         });
     }
 
+    protected static boolean shouldLoadCosmetics() {
+        return UltraCosmeticsData.get().areCosmeticsProfilesEnabled();
+    }
+
     protected abstract void load();
+
     public abstract void save();
 
     public void equip() {

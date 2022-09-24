@@ -106,7 +106,7 @@ public class GadgetPortalGun extends Gadget implements Updatable {
         }
 
         // 'distanceSquared' is faster than 'distance', and sqrt(1) == 1 anyway
-        if (playerLoc.distanceSquared(portalLoc.getLocation()) > 1) return false;
+        if (playerLoc.getWorld() != getPlayer().getWorld() || playerLoc.distanceSquared(portalLoc.getLocation()) > 1) return false;
         teleported = true;
         Location loc = dest.getLocation().clone();
         BlockFace destFace = dest.getFace();

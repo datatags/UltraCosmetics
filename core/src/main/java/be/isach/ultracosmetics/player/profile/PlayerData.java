@@ -99,7 +99,7 @@ public class PlayerData {
      */
     public void loadFromFile() {
         SettingsManager sm = SettingsManager.getData(uuid);
-        if (sm.fileConfiguration.isConfigurationSection("enabled")) {
+        if (UltraCosmeticsData.get().areCosmeticsProfilesEnabled() && sm.fileConfiguration.isConfigurationSection("enabled")) {
             cosmeticsFromFile(sm);
         }
 
@@ -204,6 +204,7 @@ public class PlayerData {
             ammo.put(type, (int) properties.get(Table.cleanCosmeticName(type)));
         }
         keys = (int) properties.get(ProfileKey.KEYS.getSqlKey());
+        if (!UltraCosmeticsData.get().areCosmeticsProfilesEnabled()) return;
         for (Category cat : Category.enabled()) {
             if (cat == Category.SUITS) {
                 for (ArmorSlot slot : ArmorSlot.values()) {

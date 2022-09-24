@@ -76,18 +76,18 @@ public class SubCommandToggle extends SubCommand {
             return;
         }
 
-        Object[] categories = Arrays.stream(Category.values()).filter(category -> category.isEnabled() && category.toString().toLowerCase().startsWith(type)).toArray();
-        if (categories.length != 1) {
+        Optional<Category> categories = Arrays.stream(Category.values()).filter(category -> category.isEnabled() && category.toString().toLowerCase().startsWith(type)).findFirst();
+        if (!categories.isPresent()) {
             sender.sendMessage(MessageManager.getMessage("Prefix") + ERROR_PREFIX + "Invalid category.");
             return;
         }
-        Category category = (Category) categories[0];
+        Category category = categories.get();
         boolean suits = category == Category.SUITS; 
         ArmorSlot slot = null;
         if (suits) {
             try {
                 slot = ArmorSlot.getByName(cosm.split(":")[1].toUpperCase());
-            } catch (IllegalArgumentException e) {
+            } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException e) {
                 sender.sendMessage(MessageManager.getMessage("Prefix") + ERROR_PREFIX + "/uc toggle suit <suit type:suit piece> <player>.");
                 return;
             }
