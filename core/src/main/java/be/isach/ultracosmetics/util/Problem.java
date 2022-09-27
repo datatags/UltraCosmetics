@@ -1,7 +1,9 @@
 package be.isach.ultracosmetics.util;
 
+import org.bukkit.ChatColor;
+
 public enum Problem {
-    BAD_MC_VERSION(true, "This version of Minecraft is not supported."),
+    BAD_MC_VERSION(true, "This version of Minecraft is not supported. See: " + ChatColor.GOLD + "https://github.com/datatags/UltraCosmetics/wiki/Supported-Configurations"),
     UNKNOWN_MC_VERSION(true, "Could not parse Minecraft version, please report this issue."),
     BAD_CONFIG(true, "config.yml is invalid, please run it through a YAML checker."),
     BAD_MESSAGES(true, "Messages file is invalid, please run it through a YAML checker."),

@@ -25,6 +25,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Tameable;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -241,6 +242,11 @@ public abstract class Pet extends EntityCosmetic<PetType> implements Updatable {
     @EventHandler
     public void onPlayerTeleport(PlayerTeleportEvent event) {
         if (event.getPlayer() == getPlayer()) getEntity().teleport(getPlayer());
+    }
+
+    @EventHandler
+    public void onClick(PlayerInteractEntityEvent event) {
+        if (event.getRightClicked() == entity) event.setCancelled(true);
     }
 
     @Override

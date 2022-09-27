@@ -157,15 +157,17 @@ public class UltraCosmeticsData {
             return Problem.UNKNOWN_MC_VERSION;
         }
 
-        ServerVersion serverVersion;
+        ServerVersion serverVersion = null;
 
         try {
             serverVersion = ServerVersion.valueOf(mcVersion);
         } catch (IllegalArgumentException exc) {
+        }
+        if (serverVersion == null || !serverVersion.isNmsSupported()) {
             ultraCosmetics.getSmartLogger().write("This NMS version isn't supported. (" + mcVersion + ")!");
             StringJoiner sj = new StringJoiner(", ");
             for (ServerVersion version : ServerVersion.values()) {
-                if (version == ServerVersion.latest()) continue;
+                if (!version.isNmsSupported() || version == ServerVersion.latest()) continue;
                 sj.add(version.getName());
             }
             ultraCosmetics.getSmartLogger().write(LogLevel.ERROR, "----------------------------");
