@@ -34,7 +34,6 @@ import be.isach.ultracosmetics.util.SmartLogger;
 import be.isach.ultracosmetics.util.SmartLogger.LogLevel;
 import be.isach.ultracosmetics.util.UpdateManager;
 import be.isach.ultracosmetics.version.VersionManager;
-import be.isach.ultracosmetics.worldguard.CosmeticRegionState;
 import be.isach.ultracosmetics.worldguard.WorldGuardManager;
 
 import org.bstats.bukkit.Metrics;
@@ -43,7 +42,6 @@ import org.bstats.charts.SimplePie;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -284,7 +282,7 @@ public class UltraCosmetics extends JavaPlugin {
         }
 
         // Set up WorldGuard if needed.
-        setupWorldGuard();
+        worldGuardManager.registerPhase2(this);
 
         // Set up economy if needed.
         setupEconomy();
@@ -401,21 +399,6 @@ public class UltraCosmetics extends JavaPlugin {
             activeProblems.add(Problem.PERMISSION_COMMAND_NOT_SET);
         }
         permissionProvider = new PermissionCommand();
-    }
-
-    private void setupWorldGuard() {
-        if (worldGuardManager != null) {
-            if (!Bukkit.getPluginManager().isPluginEnabled("WorldGuard")) {
-                getSmartLogger().write(LogLevel.ERROR, "WorldGuard is not enabled yet! Is WorldGuard up to date? Is another plugin interfering with the load order?");
-                getSmartLogger().write(LogLevel.ERROR, "WorldGuard support will be disabled.");
-                activeProblems.add(Problem.WORLDGUARD_HOOK_FAILURE);
-                worldGuardManager = null;
-                return;
-            }
-            worldGuardManager.registerPhase2();
-            getSmartLogger().write();
-            getSmartLogger().write("WorldGuard custom flags enabled");
-        }
     }
 
     private void setupMetrics() {
@@ -747,34 +730,8 @@ public class UltraCosmetics extends JavaPlugin {
         return permissionProvider;
     }
 
-    public WorldGuardManager getFlagManager() {
+    public WorldGuardManager getWorldGuardManager() {
         return worldGuardManager;
-    }
-
-    public boolean worldGuardHooked() {
-        return worldGuardManager != null;
-    }
-
-    public boolean areCosmeticsAllowedInRegion(Player player, Category category) {
-        return !worldGuardHooked() || worldGuardManager.areCosmeticsAllowedHere(player, category);
-    }
-
-    public boolean areChestsAllowedInRegion(Player player) {
-        return !worldGuardHooked() || worldGuardManager.areChestsAllowedHere(player);
-    }
-
-    public boolean arePlayersAffectedInRegion(Player target) {
-        return !worldGuardHooked() || worldGuardManager.canAffectPlayersHere(target);
-    }
-
-    public CosmeticRegionState cosmeticRegionState(Player player, Category category) {
-        if (!worldGuardHooked()) return CosmeticRegionState.ALLOWED;
-        return worldGuardManager.allowedCosmeticsState(player, category);
-    }
-
-    public void forceRegionCheck(Player target) {
-        if (!worldGuardHooked()) return;
-        worldGuardManager.doCosmeticCheck(target, this);
     }
 
     public boolean loadConfiguration(File file) {

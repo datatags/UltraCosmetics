@@ -39,7 +39,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 /**
  * Represents an instance of a mount summoned by a player.
  *
@@ -67,7 +66,7 @@ public abstract class Mount extends EntityCosmetic<MountType> implements Updatab
         entity = spawnEntity();
         EntitySpawningManager.setBypass(false);
         if (entity instanceof LivingEntity) {
-            UltraCosmeticsData.get().getVersionManager().getAncientUtil().setSpeed((LivingEntity)entity, getType().getMovementSpeed());
+            UltraCosmeticsData.get().getVersionManager().getAncientUtil().setSpeed((LivingEntity) entity, getType().getMovementSpeed());
             if (entity instanceof Ageable) {
                 ((Ageable) entity).setAdult();
             } else if (entity instanceof Slime) {
@@ -80,7 +79,7 @@ public abstract class Mount extends EntityCosmetic<MountType> implements Updatab
         entity.setMetadata("Mount", new FixedMetadataValue(UltraCosmeticsData.get().getPlugin(), "UltraCosmetics"));
         setupEntity();
 
-        if (!getUltraCosmetics().worldGuardHooked()) return;
+        if (!getUltraCosmetics().getWorldGuardManager().isHooked()) return;
         // Horses trigger PlayerMoveEvent so the standard WG move handler will be sufficient
         if (isHorse(entity.getType())) return;
         mountRegionTask = new MountRegionChecker(getOwner(), getUltraCosmetics()).runTaskTimer(getUltraCosmetics(), 0, 1);
@@ -157,7 +156,7 @@ public abstract class Mount extends EntityCosmetic<MountType> implements Updatab
             return;
         }
 
-        String name = getType().getName(getPlayer());;
+        String name = getType().getName(getPlayer());
 
         if (!beingRemoved
                 && name != null
@@ -205,7 +204,7 @@ public abstract class Mount extends EntityCosmetic<MountType> implements Updatab
                     || event.getFrom().getBlockY() != event.getTo().getBlockY()
                     || event.getFrom().getBlockZ() != event.getTo().getBlockZ()
                     || !event.getFrom().getWorld().getName().equalsIgnoreCase(event.getTo().getWorld().getName()))) {
-                //clear();
+                // clear();
             }
         }
     }

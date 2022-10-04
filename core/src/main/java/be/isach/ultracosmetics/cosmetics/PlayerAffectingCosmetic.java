@@ -21,10 +21,10 @@ public interface PlayerAffectingCosmetic {
             if (!getSelf().getUltraCosmetics().getPlayerManager().getUltraPlayer(target).hasGadgetsEnabled()) {
                 return false;
             }
-            if (!getSelf().getUltraCosmetics().arePlayersAffectedInRegion(target)) {
+            if (!getSelf().getUltraCosmetics().getWorldGuardManager().canAffectPlayersHere(target)) {
                 return false;
             }
-        // if the entity is neither a player nor a creature, just skip it
+            // if the entity is neither a player nor a creature, just skip it
         } else if (!(entity instanceof Creature)) {
             return false;
         }
@@ -39,6 +39,6 @@ public interface PlayerAffectingCosmetic {
     // Is this good interface design? Probably not,
     // but I'm not sure of a better way to do it.
     public default Cosmetic<?> getSelf() {
-        return (Cosmetic<?>)this;
+        return (Cosmetic<?>) this;
     }
 }

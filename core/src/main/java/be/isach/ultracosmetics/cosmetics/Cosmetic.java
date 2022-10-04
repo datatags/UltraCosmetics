@@ -55,7 +55,7 @@ public abstract class Cosmetic<T extends CosmeticType<?>> extends BukkitRunnable
             getPlayer().sendMessage(MessageManager.getMessage("Not-Allowed-In-Vanish"));
             return;
         }
-        CosmeticRegionState state = ultraCosmetics.cosmeticRegionState(getPlayer(), category);
+        CosmeticRegionState state = ultraCosmetics.getWorldGuardManager().allowedCosmeticsState(getPlayer(), category);
         if (state == CosmeticRegionState.BLOCKED_ALL) {
             getPlayer().sendMessage(MessageManager.getMessage("Region-Disabled"));
             return;

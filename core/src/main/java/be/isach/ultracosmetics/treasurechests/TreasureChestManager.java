@@ -122,7 +122,7 @@ public class TreasureChestManager implements Listener {
             tpTo.tpTo(player);
         }
 
-        if (!plugin.areChestsAllowedInRegion(player)) {
+        if (!plugin.getWorldGuardManager().areChestsAllowedHere(player)) {
             player.closeInventory();
             player.sendMessage(MessageManager.getMessage("Chest-Location.Region-Disabled"));
             if (preLoc != null) {

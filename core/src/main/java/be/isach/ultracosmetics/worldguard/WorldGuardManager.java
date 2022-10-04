@@ -41,8 +41,12 @@ public class WorldGuardManager {
         flagManager.register();
     }
 
-    public void registerPhase2() {
-        flagManager.registerPhase2();
+    public void registerPhase2(UltraCosmetics ultraCosmetics) {
+        if (flagManager != null) {
+            flagManager.registerPhase2();
+            ultraCosmetics.getSmartLogger().write();
+            ultraCosmetics.getSmartLogger().write("WorldGuard custom flags enabled");
+        }
     }
 
     public boolean areCosmeticsAllowedHere(Player player, Category category) {
@@ -92,4 +96,7 @@ public class WorldGuardManager {
         return categories == null || !categories.contains(category);
     }
 
+    public boolean isHooked() {
+        return flagManager != null;
+    }
 }
