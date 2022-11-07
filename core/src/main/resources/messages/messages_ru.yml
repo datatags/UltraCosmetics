@@ -1,7 +1,7 @@
 Prefix: '&l&oУкрашения >&r'
 No-Permission: '%prefix% &c&lУ вас нет права!'
 Cosmetic-Disabled: '%prefix% &c&lЭто украшение отключено!'
-Invalid-Gadget: '%prefix% &c&llНеизвестный гаджет!'
+Invalid-Gadget: '%prefix% &c&lНеизвестный гаджет!'
 Invalid-Pet: '%prefix% &c&lНеизвестный питомец!'
 Invalid-Mount: '%prefix% &c&lНеизвестная сущность!'
 Invalid-Effect: '%prefix% &c&lНеизвестный эффект!'
