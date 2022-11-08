@@ -117,6 +117,7 @@ Chest-Location:
   In-Air: '%prefix% &c&lLokasi tersebut tidak berada di tanah!'
   In-Ground: '%prefix% &c&lLokasi tersebut ada di dalam tanah!'
   Suggestion: '%prefix% &aMungkin maksud anda %location%?'
+  Dismount-First: '%prefix% &c&lYou must dismount your vehicle before opening a chest.'
 Active-Pet-Needed: '&c&lAnda harus memanggil hewan peliharaan untuk mengganti nama'
 Treasure-Chests-Loot:
   Ammo: 'peluru %name% %ammo%'

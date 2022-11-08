@@ -117,6 +117,7 @@ Chest-Location:
   In-Air: '%prefix% &c&lDiese Position ist nicht am Boden!'
   In-Ground: '%prefix% &c&lDiese Position ist im Boden!'
   Suggestion: '%prefix% &aMeintest du vielleicht %location%?'
+  Dismount-First: '%prefix% &c&lYou must dismount your vehicle before opening a chest.'
 Active-Pet-Needed: '&c&lDu must ein Haustier spawnen um es umzubenennen'
 Treasure-Chests-Loot:
   Ammo: '%ammo% %name% Munition'

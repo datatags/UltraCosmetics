@@ -116,7 +116,8 @@ Chest-Location:
   Invalid: '%prefix% &c&lThat''s not a valid location.'
   In-Air: '%prefix% &c&lThat location is not on the ground!'
   In-Ground: '%prefix% &c&lThat location is in the ground!'
-  Suggestion: '%prefix% &aMaybe you meant %location%?'
+  Suggestion: '%prefix% &aMaybe you meant %location
+  Dismount-First: '%prefix% &c&lYou must dismount your vehicle before opening a chest.'
 Active-Pet-Needed: '&c&lYou need to spawn a pet to rename it'
 Treasure-Chests-Loot:
   Ammo: '%ammo% %name% ammo'
