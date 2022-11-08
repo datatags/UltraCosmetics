@@ -59,7 +59,7 @@ public class MenuGadgets extends CosmeticMenu<GadgetType> {
         loreList.add("");
         int ammo = player.getAmmo(gadgetType);
         loreList.add(MessageManager.getMessage("Ammo").replace("%ammo%", "" + ammo));
-        if (ultraCosmetics.getEconomyHandler().isUsingEconomy()) {
+        if (UltraCosmeticsData.get().isAmmoPurchaseEnabled() && ultraCosmetics.getEconomyHandler().isUsingEconomy()) {
             loreList.add(MessageManager.getMessage("Right-Click-Buy-Ammo"));
         }
 
