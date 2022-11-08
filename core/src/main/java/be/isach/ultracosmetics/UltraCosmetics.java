@@ -540,6 +540,7 @@ public class UltraCosmetics extends JavaPlugin {
             config.set("MySQL.Enabled", !config.getString(oldMysqlKey).equalsIgnoreCase("file"));
             config.set(oldMysqlKey, null);
         }
+        config.addDefault("Ammo-System-For-Gadgets.Allow-Purchase", true, "Whether players should be able to purchase ammo");
         config.addDefault("MySQL.Enabled", false);
         config.addDefault("MySQL.hostname", "localhost");
         config.addDefault("MySQL.username", "root");

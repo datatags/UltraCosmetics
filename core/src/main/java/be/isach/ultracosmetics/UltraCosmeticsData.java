@@ -68,6 +68,11 @@ public class UltraCosmeticsData {
     private boolean placeHolderColor;
 
     /**
+     * If false, players will not be able to purchase ammo
+     */
+    private boolean ammoPurchase;
+
+    /**
      * Language set in config.yml
      */
     private String language;
@@ -209,6 +214,7 @@ public class UltraCosmeticsData {
         this.closeAfterSelect = ultraCosmetics.getConfig().getBoolean("Categories.Close-GUI-After-Select");
         this.cosmeticsProfilesEnabled = ultraCosmetics.getConfig().getBoolean("Auto-Equip-Cosmetics");
         this.language = SettingsManager.getConfig().getString("Language");
+        this.ammoPurchase = SettingsManager.getConfig().getBoolean("Ammo-System-For-Gadgets.Allow-Purchase");
     }
 
     public boolean isAmmoEnabled() {
@@ -249,6 +255,10 @@ public class UltraCosmeticsData {
 
     public String getLanguage() {
         return language;
+    }
+
+    public boolean isAmmoPurchaseEnabled() {
+        return ammoEnabled && ammoPurchase;
     }
 
     public VersionManager getVersionManager() {
