@@ -30,7 +30,7 @@ public class MountDruggedHorse extends MountAbstractHorse {
         ((Horse)getEntity()).setJumpStrength(1.3);
 
         Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), () -> {
-            getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 10000000, 1));
+            getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 0));
             effectPlayer = getPlayer();
         }, 1);
     }
