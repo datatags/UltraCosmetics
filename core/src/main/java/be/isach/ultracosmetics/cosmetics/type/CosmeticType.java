@@ -185,7 +185,7 @@ public abstract class CosmeticType<T extends Cosmetic<?>> {
     /**
      * Override toString method to show Cosmetic name.
      *
-     * @return
+     * @return cosmetic name
      */
     @Override
     public String toString() {

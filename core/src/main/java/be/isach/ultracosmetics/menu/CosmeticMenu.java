@@ -99,7 +99,7 @@ public abstract class CosmeticMenu<T extends CosmeticType<?>> extends Menu {
             }
 
             String toggle = category.getActivateTooltip();
-            boolean deactivate = player.hasCosmetic(category) && player.getCosmetic(category).getType() == cosmeticType;
+            boolean deactivate = hasEquipped(player, cosmeticType);
 
             if (deactivate) {
                 toggle = category.getDeactivateTooltip();
@@ -415,6 +415,6 @@ public abstract class CosmeticMenu<T extends CosmeticType<?>> extends Menu {
     }
 
     protected boolean hasEquipped(UltraPlayer ultraPlayer, T type) {
-        return ultraPlayer.hasCosmetic(type.getCategory());
+        return ultraPlayer.hasCosmetic(type.getCategory()) && ultraPlayer.getCosmetic(type.getCategory()).getType() == type;
     }
 }

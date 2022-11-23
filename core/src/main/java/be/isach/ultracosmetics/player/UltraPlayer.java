@@ -225,7 +225,7 @@ public class UltraPlayer {
      * Internal use only
      *
      * @param category The category of cosmetic to unequip
-     * @return
+     * @return the cosmetic that was removed
      */
     public Cosmetic<?> unsetCosmetic(Category category) {
         if (!isQuitting()) {

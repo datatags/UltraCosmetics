@@ -85,7 +85,7 @@ public class MorphType extends CosmeticType<Morph> {
     /**
      * Get the morph Disguise Type.
      *
-     * @return
+     * @return disguise type
      */
     public DisguiseType getDisguiseType() {
         return disguiseType;

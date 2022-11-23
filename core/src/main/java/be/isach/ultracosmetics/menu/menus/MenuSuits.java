@@ -9,10 +9,13 @@ import be.isach.ultracosmetics.cosmetics.type.SuitCategory;
 import be.isach.ultracosmetics.cosmetics.type.SuitType;
 import be.isach.ultracosmetics.menu.CosmeticMenu;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import com.cryptomorin.xseries.XMaterial;
+
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import com.cryptomorin.xseries.XMaterial;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +29,7 @@ import java.util.Map;
  */
 public final class MenuSuits extends CosmeticMenu<SuitType> {
 
-    private static final int[] SLOTS = new int[] {10, 11, 12, 13, 14, 15, 16};
+    private static final int[] SLOTS = new int[] { 10, 11, 12, 13, 14, 15, 16 };
 
     public MenuSuits(UltraCosmetics ultraCosmetics) {
         super(ultraCosmetics, Category.SUITS);
@@ -131,6 +134,6 @@ public final class MenuSuits extends CosmeticMenu<SuitType> {
 
     @Override
     public boolean hasEquipped(UltraPlayer ultraPlayer, SuitType type) {
-        return ultraPlayer.hasSuitPartOn(type.getSlot());
+        return ultraPlayer.hasSuitPartOn(type.getSlot()) && ultraPlayer.getSuit(type.getSlot()).getType() == type;
     }
 }

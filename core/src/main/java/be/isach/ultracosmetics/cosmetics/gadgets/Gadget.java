@@ -197,7 +197,7 @@ public abstract class Gadget extends Cosmetic<GadgetType> {
     /**
      * Gets the gadget current Item Stack.
      *
-     * @return
+     * @return current ItemStack
      */
     public ItemStack getItemStack() {
         return itemStack;
