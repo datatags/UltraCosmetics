@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'org.spigotmc:spigot:1.19.3-R0.1-SNAPSHOT:remapped-mojang'
+    implementation project(':core')
+}
