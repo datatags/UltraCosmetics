@@ -56,9 +56,9 @@ public class PlayerListener implements Listener {
         new BukkitRunnable() {
             @Override
             public void run() {
+                UltraPlayer up = ultraCosmetics.getPlayerManager().getUltraPlayer(event.getPlayer());
                 if (SettingsManager.getConfig().getBoolean("Menu-Item.Enabled") && event.getPlayer().hasPermission("ultracosmetics.receivechest") && SettingsManager.isAllowedWorld(event.getPlayer().getWorld())) {
                     Bukkit.getScheduler().runTaskLater(ultraCosmetics, () -> {
-                        UltraPlayer up = ultraCosmetics.getPlayerManager().getUltraPlayer(event.getPlayer());
                         if (up != null) {
                             up.giveMenuItem();
                         }
