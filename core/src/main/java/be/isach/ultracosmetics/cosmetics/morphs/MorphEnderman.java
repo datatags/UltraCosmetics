@@ -2,6 +2,7 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 
 import java.util.ArrayList;
 
+import be.isach.ultracosmetics.UltraCosmeticsData;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -17,6 +18,7 @@ import org.bukkit.inventory.meta.FireworkMeta;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
+import org.bukkit.metadata.FixedMetadataValue;
 
 /**
  * Represents an instance of an enderman morph summoned by a player.
@@ -82,6 +84,7 @@ public class MorphEnderman extends Morph {
             fm.addEffect(getRandomFireworkEffect());
             f.setFireworkMeta(fm);
             fireworks.add(f);
+            f.setMetadata("uc_firework", new FixedMetadataValue(getUltraCosmetics(), 1));
         }
         Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), () -> {
             for (Firework f : fireworks)

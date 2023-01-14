@@ -39,6 +39,7 @@ import org.bukkit.inventory.meta.FireworkMeta;
 
 import com.cryptomorin.xseries.XSound;
 import com.cryptomorin.xseries.messages.ActionBar;
+import org.bukkit.metadata.FixedMetadataValue;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -231,8 +232,8 @@ public abstract class Gadget extends Cosmetic<GadgetType> {
             Firework f = (Firework) location.getWorld().spawnEntity(location, EntityType.FIREWORK);
             FireworkMeta fm = f.getFireworkMeta();
             fm.addEffect(getRandomFireworkEffect(main, fade));
-            fm.setDisplayName("uc_firework");
             f.setFireworkMeta(fm);
+            f.setMetadata("uc_firework", new FixedMetadataValue(getUltraCosmetics(), 1));
         }
         Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), () -> {
             for (Firework f : fireworks) {

@@ -1,6 +1,7 @@
 package be.isach.ultracosmetics.cosmetics.gadgets;
 
 import be.isach.ultracosmetics.UltraCosmetics;
+import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.cosmetics.type.GadgetType;
 import be.isach.ultracosmetics.player.UltraPlayer;
 
@@ -9,6 +10,7 @@ import org.bukkit.FireworkEffect;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
 import org.bukkit.inventory.meta.FireworkMeta;
+import org.bukkit.metadata.FixedMetadataValue;
 
 /**
  * Represents an instance of a firework gadget summoned by a player.
@@ -42,5 +44,6 @@ public class GadgetFirework extends Gadget {
         fwm.setPower(RANDOM.nextInt(3));
 
         fw.setFireworkMeta(fwm);
+        fw.setMetadata("uc_firework", new FixedMetadataValue(getUltraCosmetics(), 1));
     }
 }

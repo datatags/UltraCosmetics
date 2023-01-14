@@ -30,7 +30,7 @@ import java.util.Set;
  */
 public class TreasureChestManager implements Listener {
 
-    private static Random random = new Random();
+    private static final Random random = new Random();
     private static final List<TreasureLocation> TREASURE_LOCATIONS = new ArrayList<>();
 
     static {

@@ -17,6 +17,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.util.Vector;
 
 import com.cryptomorin.xseries.XSound;
@@ -54,6 +55,7 @@ public class GadgetQuakeGun extends Gadget implements PlayerAffectingCosmetic {
             Firework firework = (Firework) location.getWorld().spawnEntity(location, EntityType.FIREWORK);
             location.add(vector);
             fireworkList.add(firework);
+            firework.setMetadata("uc_firework", new FixedMetadataValue(getUltraCosmetics(), 1));
 
             List<Entity> nearbyEntities = firework.getNearbyEntities(0.5d, 0.5d, 0.5d);
 

@@ -256,7 +256,7 @@ public class PlayerListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
-        if (event.getDamager() instanceof Firework && event.getDamager().hasMetadata("UCFirework")) {
+        if (event.getDamager() instanceof Firework && event.getDamager().hasMetadata("uc_firework")) {
             event.setCancelled(true);
         }
     }
