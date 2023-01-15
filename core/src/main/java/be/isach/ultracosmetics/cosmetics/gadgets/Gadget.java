@@ -5,6 +5,7 @@ import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.config.MessageManager;
 import be.isach.ultracosmetics.config.SettingsManager;
 import be.isach.ultracosmetics.cosmetics.Cosmetic;
+import be.isach.ultracosmetics.cosmetics.PlayerAffectingCosmetic;
 import be.isach.ultracosmetics.cosmetics.Updatable;
 import be.isach.ultracosmetics.cosmetics.type.GadgetType;
 import be.isach.ultracosmetics.player.UltraPlayer;
@@ -271,7 +272,7 @@ public abstract class Gadget extends Cosmetic<GadgetType> {
 
         if (ultraPlayer.getCurrentTreasureChest() != null) return;
 
-        if (player.hasMetadata("vanished") && SettingsManager.getConfig().getBoolean("Prevent-Cosmetics-In-Vanish")) {
+        if (PlayerAffectingCosmetic.isVanished(player) && SettingsManager.getConfig().getBoolean("Prevent-Cosmetics-In-Vanish")) {
             getOwner().clear();
             getPlayer().sendMessage(MessageManager.getMessage("Not-Allowed-In-Vanish"));
             return;

@@ -7,6 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.metadata.MetadataValue;
 
 public interface PlayerAffectingCosmetic {
     public default boolean canAffect(Entity entity) {
@@ -16,8 +17,7 @@ public interface PlayerAffectingCosmetic {
             Player target = (Player) entity;
             // alternate NPC check
             if (Bukkit.getPlayer(target.getUniqueId()) == null) return false;
-            // Standard API-less vanish check
-            if (target.hasMetadata("vanished")) return false;
+            if (isVanished(target)) return false;
             if (!getSelf().getUltraCosmetics().getPlayerManager().getUltraPlayer(target).hasGadgetsEnabled()) {
                 return false;
             }
@@ -34,6 +34,14 @@ public interface PlayerAffectingCosmetic {
     public default boolean isAffectingPlayersEnabled() {
         CosmeticType<?> type = getSelf().getType();
         return SettingsManager.getConfig().getBoolean(type.getCategory().getConfigPath() + "." + type.getConfigName() + ".Affect-Players");
+    }
+
+    public static boolean isVanished(Player target) {
+        // Standard API-less vanish check
+        for (MetadataValue meta : target.getMetadata("vanished")) {
+            if (meta.asBoolean()) return true;
+        }
+        return false;
     }
 
     // Is this good interface design? Probably not,
