@@ -21,11 +21,8 @@ dependencies {
     compileOnly 'com.mojang:authlib:2.3.31'
     // used by the update checker
     compileOnly 'com.googlecode.json-simple:json-simple:1.1.1'
-    // NMS modules can't actually use XSeries but it doesn't compile without 'api'.
-    // IDEs do not like it when 'core' references XSeries directly
-    // but subprojects must reference XSeries as shaded.
-    //api 'com.github.cryptomorin:XSeries:9.4.0'
-    api fileTree(dir: '.', include: ['XSeries-*.jar'])
+    api 'com.github.cryptomorin:XSeries:9.6.0'
+    //api fileTree(dir: '.', include: ['XSeries-*.jar'])
     implementation 'org.bstats:bstats-bukkit:3.0.2'
     compileOnly 'net.luckperms:api:5.4'
     compileOnly "me.lokka30:treasury-api:2.0.2-SNAPSHOT"
