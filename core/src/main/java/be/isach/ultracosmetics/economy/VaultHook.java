@@ -1,12 +1,9 @@
 package be.isach.ultracosmetics.economy;
 
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
-
-import net.milkbowl.vault.economy.Economy;
-import net.milkbowl.vault.economy.EconomyResponse;
-import net.milkbowl.vault.economy.EconomyResponse.ResponseType;
 
 /**
  * Vault economy hook.
@@ -30,12 +27,8 @@ public class VaultHook implements EconomyHook {
 
     @Override
     public void withdraw(Player player, int amount, Runnable onSuccess, Runnable onFailure) {
-        EconomyResponse response = economy.withdrawPlayer(player, amount);
-        if (response.type == ResponseType.SUCCESS) {
-            onSuccess.run();
-        } else {
-            onFailure.run();
-        }
+        economy.withdrawPlayer(player, amount);
+        onSuccess.run();
     }
 
     @Override
