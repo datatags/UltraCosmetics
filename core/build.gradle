@@ -27,7 +27,7 @@ dependencies {
     compileOnly 'net.luckperms:api:5.4'
     compileOnly "me.lokka30:treasury-api:2.0.2-SNAPSHOT"
     compileOnly 'de.jeff_media:ChestSortAPI:13.0.0-SNAPSHOT'
-    compileOnly 'com.palmergames.bukkit.towny:towny:0.99.5.4'
+    compileOnly 'com.palmergames.bukkit.towny:towny:0.100.1.8'
     implementation 'com.zaxxer:HikariCP:4.0.3'
     implementation 'net.wesjd:anvilgui:1.9.2-SNAPSHOT'
     implementation 'me.gamercoder215:mobchip-bukkit:1.9.4-SNAPSHOT'
