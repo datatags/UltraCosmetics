@@ -213,7 +213,7 @@ Enable-Third-Person-View: <bold><green>Habilitar vista de transformaciones en te
 Disable-Filter-By-Owned: '<bold><red>Filtro: Mostrar todo'
 Enable-Filter-By-Owned: '<bold><red>Filtro: Mostrar solo los desbloqueados'
 Disable-Treasure-Notification: <bold><red>Notificaciones de cofres del tesoro deshabilitados
-Enable-Treasure-Notification: <bold><red>Treasure notifications enabled
+Enable-Treasure-Notification: <bold><red>Notificaciones de tesoro habilitadas
 Gadgets-Enabled-Needed: <prefix> <bold><red>Tienes que habilitar los gadgets para eso!
 Gadgets:
   Equip: <prefix> <blue>Equipaste <gadgetname>

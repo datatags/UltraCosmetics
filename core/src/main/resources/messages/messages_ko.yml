@@ -29,278 +29,277 @@ Left-Click-Open-Chest: <green>좌클릭으로 상자 열기
 Right-Click-Simple: <green>우클릭으로 치장 얻기
 Your-Keys: '<italic><gray>열쇠: </gray></italic><bold><white><keys>'
 Buy-Treasure-Key-ItemName: <bold><gray>보물열쇠 </gray><yellow>1개는 </yellow><yellow>$<price> 입니다
-You-Won-Treasure-Chests: '<prefix> <bold><white>You won: <name>!'
-Treasure-Chest-Occupied: <prefix> <bold><red>All treasure locations are full, please wait and try again
-No-Ammo: <prefix> <bold><red>You don't have any ammo for this gadget!
-Cannot-Sell-Item: <prefix> <bold><red>You cannot sell this item!
-Structure-Chests-Disabled: <prefix> <bold><red>Structure chests are disabled!
+You-Won-Treasure-Chests: '<prefix><bold><white>당신은:<name>을 얻었습니다!'
+Treasure-Chest-Occupied: <prefix><bold><red>모든 보물 위치가 가득 찼습니다. 잠시 후 다시 시도해 주세요
+No-Ammo: <prefix><bold><red>이 도구를 쓸 탄약이 부족합니다!
+Cannot-Sell-Item: <prefix><bold><red>당신은 이 아이템을 판매하실 수 없습니다!
+Structure-Chests-Disabled: <prefix><bold><red>구조물 상자가 비활성화되었습니다!
 Clear:
-  Cosmetics: <bold><red>Clear cosmetics
-  Gadgets: <bold><red>Clear current gadget
-  Pets: <bold><red>Clear current pet
-  Mounts: <bold><red>Clear current mount
-  Particle-Effects: <bold><red>Clear current effect
-  Morphs: <bold><red>Clear current morph
-  Hats: <bold><red>Clear current hat
-  Suits: <bold><red>Clear current suit
-  Emotes: <bold><red>Clear current emote
-  Projectile-Effects: <bold><red>Clear current projectile effect
-  Death-Effects: <bold><red>Clear current death effect
+  Cosmetics: <bold><red>치장 해제
+  Gadgets: <bold><red>현재 장착중인 도구 해제
+  Pets: <bold><red>현재 장착중인 펫 해제
+  Mounts: <bold><red>현재 타고있는 펫 해제
+  Particle-Effects: <bold><red>현재 장착중인 이펙트 해제
+  Morphs: <bold><red>현재 모프 지우기
+  Hats: <bold><red>현재 장착중인 모자 해제
+  Suits: <bold><red>현재 장착중인 옷 해제
+  Emotes: <bold><red>현재 장착중인 이모티콘 해제
+  Projectile-Effects: <bold><red>현재 장착중인 탄환 이펙트 해제
+  Death-Effects: <bold><red>현재 장착중인 사망 이펙트 해제
 Menu:
   Purchase-Rename:
     Button:
-      Showcase: <bold><red>Rename the pet to </red><white><name> </white><red>for </red><yellow>$<price>
-    Title: <bold>Rename Pet
+      Showcase: <bold><red>펫 이름을 </red><white><name></white><red>로 변경하기위해선 </red><yellow>$원이 필요합니다<price>
+    Title: <bold>펫 이름 변경
   Purchase-Cosmetic:
-    Title: <bold>Purchase <cosmetic>
+    Title: <bold>구매<cosmetic>
   Rename-Pet:
     Button:
-      Name: '<bold><red>Click to rename: <petname>'
-    Placeholder: Pet Name
-    Title: Rename pet
+      Name: '<bold><red>클릭시 이름 변경: <petname>'
+    Placeholder: 펫 이름
+    Title: 펫 이름 변경
   Main:
-    Title: <bold>Main Menu
+    Title: <bold>메인 메뉴
     Button:
-      Name: <bold><red>Main Menu
+      Name: <bold><red>메인 메뉴
   Pets:
-    Title: <bold>Pets
+    Title: <bold>펫들
     Button:
-      Name: <bold><green>Pets
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Spawn
-      Tooltip-Unequip: <bold><red>Despawn
+      Name: <bold><green>펫들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>소환
+      Tooltip-Unequip: <bold><red>소환해제
   Gadgets:
-    Title: <bold>Gadgets
+    Title: <bold>도구들
     Button:
-      Name: <bold><blue>Gadgets
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Activate
-      Tooltip-Unequip: <bold><red>Deactivate
+      Name: <bold><blue>도구들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>활성화
+      Tooltip-Unequip: <bold><red>비활성화
   Mounts:
-    Title: <bold>Mounts
+    Title: <bold>탈것들
     Button:
-      Name: <bold><gold>Mounts
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Spawn
-      Tooltip-Unequip: <bold><red>Despawn
+      Name: <bold><gold>탈것들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>소환
+      Tooltip-Unequip: <bold><red>소환해제
   Morphs:
-    Title: <bold>Morphs
+    Title: <bold>변신
     Button:
-      Name: <bold><dark_green>Morphs
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Morph into
-      Tooltip-Unequip: <bold><red>Unmorph from
+      Name: <bold><dark_green>변신
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>변신하기
+      Tooltip-Unequip: <bold><red>변신 해제
   Hats:
-    Title: <bold>Hats
+    Title: <bold>모자들
     Button:
-      Name: <bold><light_purple>Hats
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Equip
-      Tooltip-Unequip: <bold><red>Unequip
+      Name: <bold><light_purple>모자들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>장착
+      Tooltip-Unequip: <bold><red>장착해제
   Particle-Effects:
-    Title: <bold>Particle Effects
+    Title: <bold>파티클 효과들
     Button:
-      Name: <bold><aqua>Particle Effects
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Summon
-      Tooltip-Unequip: <bold><red>Unsummon
+      Name: <bold><aqua>파티클 효과들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>소환
+      Tooltip-Unequip: <bold><red>소환해제
   Suits:
-    Title: <bold>Suits
+    Title: <bold>옷들
     Button:
-      Name: <bold><dark_aqua>Suits
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Equip
-      Tooltip-Unequip: <bold><red>Unequip
+      Name: <bold><dark_aqua>옷들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>장착
+      Tooltip-Unequip: <bold><red>장착해제
   Emotes:
-    Title: <bold>Emotes
+    Title: <bold>이모티콘들
     Button:
-      Name: <bold><yellow>Emotes
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Equip
-      Tooltip-Unequip: <bold><red>Unequip
+      Name: <bold><yellow>이모티콘들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>장착
+      Tooltip-Unequip: <bold><red>장착해제
   Projectile-Effects:
-    Title: <bold>Projectile Effects
+    Title: <bold>탄환 효과들
     Button:
-      Name: <bold><dark_purple>Projectile Effects
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Equip
-      Tooltip-Unequip: <bold><red>Unequip
+      Name: <bold><dark_purple>탄환 효과들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>장착
+      Tooltip-Unequip: <bold><red>장착해제
   Death-Effects:
-    Title: <bold>Death Effects
+    Title: <bold>사망 효과들
     Button:
-      Name: <bold><red>Death Effects
-      Lore: '<gray>Unlocked: </gray><white><unlocked>'
-      Tooltip-Equip: <bold><aqua>Equip
-      Tooltip-Unequip: <bold><red>Unequip
+      Name: <bold><red>사망 효과들
+      Lore: '<gray>해금되지 않음:</gray><white><unlocked>'
+      Tooltip-Equip: <bold><aqua>장착
+      Tooltip-Unequip: <bold><red>장착해제
   Buy-Ammo:
-    Title: <bold>Buy Ammo
+    Title: <bold>총알 구매
   Misc:
     Button:
-      Previous-Page: <bold><red>Previous Page
-      Next-Page: <bold><green>Next Page
-  Disabled-Button: <red>DISABLED
+      Previous-Page: <bold><red>이전 페이지
+      Next-Page: <bold><green>다음 페이지
+  Disabled-Button: <red>비활성화됨
 Chest-Location:
-  Not-Enough-Space: <prefix> <bold><red>There isn't enough space for a treasure chest!
-  Region-Disabled: <prefix> <bold><red>You can't open a chest here!
-  Invalid: <prefix> <bold><red>That's not a valid location.
-  In-Air: <prefix> <bold><red>That location is not on the ground!
-  In-Ground: <prefix> <bold><red>That location is in the ground!
-  Suggestion: <prefix> <green>Maybe you meant <location>?
-  Dismount-First: <prefix> <bold><red>You must dismount your vehicle before opening a chest.
-  Too-Close-To-Entity: <prefix> <bold><red>You are too close to another entity!
-Active-Pet-Needed: <bold><red>You need to spawn a pet to rename it
+  Not-Enough-Space: <prefix><bold><red>보물상자를 열 공간이 부족해요!
+  Region-Disabled: <prefix><bold><red>여기서 보물상자 여실 수 없습니다!
+  Invalid: <prefix><bold><red>유효한 위치가 아닙니다
+  In-Air: <prefix><bold><red>그 위치는 지상이 아닙니다!
+  In-Ground: <prefix><bold><red>그 위치는 지상이 아닙니다!
+  Suggestion: <prefix><green>아마도 <location>를 의미하신 것 같은데요?
+  Dismount-First: <prefix><bold><red>상자를 열기 전에 탈것에서 내려야 합니다.
+  Too-Close-To-Entity: <prefix><bold><red>엔티티와 너무 가깝습니다! 떨어져주세요!
+Active-Pet-Needed: <bold><red>이름을 바꾸려면 애완동물을 생성해야 합니다.
 Treasure-Chests-Loot:
   Ammo: |-
-    <blue>Ammo
-    <ammo> <cosmetic>
+    <blue>총알
+    <ammo><cosmetic>
   Money: |-
-    <yellow>Money
-    <bold><yellow>$<money>
-  Nothing: <bold><red>Nothing
+    <yellow>돈
+    <bold><yellow><money>
+  Nothing: <bold><red>없음
   Pets: |-
-    <green>Pet
+    <green>펫
     <cosmetic>
   Mounts: |-
-    <gold>Mount
+    <gold>탈것
     <cosmetic>
   Particle-Effects: |-
-    <aqua>Particle Effect
+    <aqua>파티클 효과들
     <cosmetic>
   Morphs: |-
-    <dark_green>Morph
+    <dark_green>변신
     <cosmetic>
   Hats: |-
-    <light_purple>Hat
+    <light_purple>모자
     <cosmetic>
   Gadgets: |-
-    <blue>Gadget
+    <blue>도구
     <cosmetic>
   Suits: |-
-    <dark_aqua>Suit
+    <dark_aqua>옷
     <cosmetic>
   Emotes: |-
-    <yellow>Emote
+    <yellow>이모티콘
     <cosmetic>
   Death-Effects: |-
-    <red>Death Effect
+    <red>사망 효과
     <cosmetic>
   Projectile-Effects: |-
-    <dark_purple>Projectile Effect
+    <dark_purple>탄환 효과
     <cosmetic>
 Treasure-Chests-Loot-Messages:
-  Ammo: <prefix> <bold><gold><name> found <ammo> <cosmetic> ammo
-  Money: <prefix> <bold><gold><name> found $<money>
-  Pets: <prefix> <bold><gold><name> found rare <cosmetic>
-  Mounts: <prefix> <bold><gold><name> found rare <cosmetic>
-  Particle-Effects: <prefix> <bold><gold><name> found legendary <cosmetic>
-  Morphs: <prefix> <bold><gold><name> found legendary <cosmetic>
-  Hats: <prefix> <bold><gold><name> found rare <cosmetic>
-  Gadgets: <prefix> <bold><gold><name> found gadget <cosmetic>
-  Suits: <prefix> <bold><gold><name> found rare <cosmetic>
-  Emotes: <prefix> <bold><gold><name> found rare <cosmetic>
-  Death-Effects: <prefix> <bold><gold><name> found rare <cosmetic>
-  Projectile-Effects: <prefix> <bold><gold><name> found rare <cosmetic>
+  Ammo: <prefix><bold><gold><name> <ammo><cosmetic> 총알을 얻었습니다
+  Money: <prefix> <bold><gold><name> $<money>원을 얻으셨습니다
+  Pets: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Mounts: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Particle-Effects: <prefix> <bold><gold><name> 전설 <cosmetic> 을 얻으셨습니다
+  Morphs: <prefix> <bold><gold><name> 전설 <cosmetic> 을 얻으셨습니다
+  Hats: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Gadgets: <prefix> <bold><gold><name> <cosmetic> 도구를 얻으셨습니다
+  Suits: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Emotes: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Death-Effects: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
+  Projectile-Effects: <prefix><bold><gold><name> 레어 <cosmetic>을 얻으셨습니다
 Permission-Lore:
-  Showroom: '<gray>Permission: </gray><gold>Usable in showroom'
-  Permission-No: '<gray>Permission: </gray><bold><dark_red>No!'
-  Permission-Yes: '<gray>Permission: </gray><bold><green>Yes!'
-Disable-Gadgets: <bold><red>Disable Gadgets
-Disable-Gadgets-Lore: <red>Disables use of gadgets and effects of them on you
-Enable-Gadgets: <bold><green>Enable Gadgets
-Enable-Gadgets-Lore: <green>Enables use of gadgets and effects of them on you
-Disable-Third-Person-View: <bold><red>Disable Morphs Third Person View
-Enable-Third-Person-View: <bold><green>Enable Morphs Third Person View
-Disable-Filter-By-Owned: <bold><red>Change to Show All
-Enable-Filter-By-Owned: <bold><red>Change to Filter By Owned
-Disable-Treasure-Notification: <bold><red>Treasure notifications disabled
-Enable-Treasure-Notification: <bold><red>Treasure notifications enabled
-Gadgets-Enabled-Needed: <prefix> <bold><red>You need to enable gadgets!
+  Showroom: '<gray>권한: </gray><gold>쇼룸에서 사용가능'
+  Permission-No: '<gray>권한: </gray><bold><dark_red>불가능!'
+  Permission-Yes: '<gray>권한: </gray><bold><green>가능!'
+Disable-Gadgets: <bold><red>도구 비활성화
+Disable-Gadgets-Lore: <red>가젯 사용 및 해당 효과가 사용자에게 미치는 영향을 비활성화합니다.
+Enable-Gadgets: <bold><green>가젯 활성화
+Enable-Gadgets-Lore: <green>가젯을 사용하고 해당 효과가 사용자에게 미치는 영향을 활성화합니다.
+Disable-Third-Person-View: <bold><red>3인칭에서 변신을 비활성화합니다
+Enable-Third-Person-View: <bold><green>3인칭에서 변신을 활성화합니다
+Disable-Filter-By-Owned: <bold><red>모두 표시로 변경
+Enable-Filter-By-Owned: <bold><red>소유 중인 것들 필터로 변경
+Disable-Treasure-Notification: <bold><red>보물상자 알림 비활성화
+Enable-Treasure-Notification: <bold><red>보물상자 알림 활성화
+Gadgets-Enabled-Needed: <prefix><bold><red>당신은 도구를 활성화해야합니다!
 Gadgets:
-  Equip: <prefix> <blue>You equipped <gadgetname>
-  Unequip: <prefix> <blue>You unequipped <gadgetname>
-  Countdown-Message: <prefix> <bold><red>You can't use <gadgetname> for <time>s!
+  Equip: <prefix><blue>당신 <gadgetname>도구를 장착했습니다
+  Unequip: <prefix><blue>당신은 <gadgetname>도구를 장착해제했습니다
+  Countdown-Message: <prefix><bold><red>당신은 <gadgetname>를 <time>초 동안 사용할 수 없습니다!
   PaintballGun:
-    name: <bold><aqua>Paintball Gun
-    Description: PEW PEW PEW PEW!!!
+    name: <bold><aqua>페인트볼 건
+    Description: 탕 탕 탕 탕!!!
   BatBlaster:
-    name: <bold><gray>Bat Blaster
+    name: <bold><gray>박쥐 발사기
     Description: |-
-      Launch waves of bats
-      at people you don't like!
+      당신이 싫어하는 사람에게
+      박쥐의 파도 발사!!
   MelonThrower:
-    name: <bold><green>Melon Thrower
-    Wait-For-Finish: <prefix> <bold><red>Wait for your previous melon to finish exploding!
-    Description: Deliciously fun!
+    name: <bold><green>멜론 발사기
+    Wait-For-Finish: <prefix><bold><red>이전 멜론이 폭발할 때까지 기다리세요!
+    Description: 완전 재밌네요!
   EtherealPearl:
-    name: <bold><dark_purple>Ethereal Pearl
+    name: <bold><dark_purple>에테르 진주
     Description: |-
-      Take a ride through the skies
-      on your very own Ethereal Pearl!
+      나만의 에테르 진주로
+      하늘을 타고 달려보세요!
   FleshHook:
-    name: <bold><gray>Flesh Hook
+    name: <bold><gray>사람 날리는 갈고리
     Description: |-
-      Make new friends by throwing a hook
-      at them and pulling them
-      to you!
+      고리를 던져 새로운 친구를 사귀세요
+      그들을 당신에게 당기세요!
   DiscoBall:
-    name: <bold><light_purple>Disco Ball
-    Already-Active: <bold><red>There is already a disco ball active!
-    Not-Space-Above: <bold><red>There is not enough space above you!
-    Description: Just dance!
+    name: <bold><light_purple>디스코 볼
+    Already-Active: <bold><red>이미 활성화된 디스코 볼이 있습니다!
+    Not-Space-Above: <bold><red>당신 위에 공간이 충분하지 않습니다!
+    Description: 댄스 타임!
   ColorBomb:
-    name: <bold><light_purple>Color Bomb
-    Description: A colorful bomb!
+    name: <bold><light_purple>색깔 폭탄
+    Description: 색깔 폭탄!!
   Chickenator:
-    name: <bold><white>Chickenator
-    Description: 1.Shoot! 2.Boom! 3.KFC!
+    name: <bold><white>닭생성기
+    Description: 1.발사! 2.붐! 3.BBQ! 먹고싶다!
   PortalGun:
-    name: <bold><red>Portal </red><blue>Gun
-    No-Block-Range: <prefix> <bold><red>No BLOCKS in range!
-    Different-Worlds: <prefix> <bold><red>Portals must be in the same world!
-    Description: The cake is a lie!
+    name: <bold><red>포탈</red><blue>건
+    No-Block-Range: <prefix><bold><red>범위 내에 블록이 없습니다!
+    Different-Worlds: <prefix><bold><red>Portal은 같은 세계에 있어야 합니다!
+    Description: 케이크는 거짓말이에요!
   BlizzardBlaster:
-    name: <bold><aqua>Blizzard Blaster
-    Description: Let it snow!
+    name: <bold><aqua>블리자드 블래스터
+    Description: 눈이 내리게 해주세요!
   ThorHammer:
-    name: <bold><white>Thor's Hammer
-    Description: Get the real Mjölnir!
+    name: <bold><white>토르의 망치
+    Description: 진짜 Mjölnir를 얻으세요!
   SmashDown:
-    name: <bold><red>SmashDown
-    Description: AND HIS NAME IS...JOHN CENA!
+    name: <bold><red>땅바닥에 스매쉬~!
+    Description: 그리고 그의 이름은...존 시나입니다!
   ExplosiveSheep:
-    name: <bold><dark_red>Explosive Sheep
-    Already-Active: <bold><red>There is already an explosive sheep active!
+    name: <bold><dark_red>시한폭탄 양
+    Already-Active: <bold><red>이미 폭발적인 양이 활성화되어 있습니다!
     Description: |-
-      Are you sure it's supposed
-      to flicker like that?
+      그럴 거라고 확신하시나요? 
+      그렇게 깜박이려고?
   AntiGravity:
-    name: <bold><light_purple>Anti Gravity
+    name: <bold><light_purple>반중력
     Description: |-
-      You don't like gravity?
-      Then, this gadget is made for you!
+      중력을 좋아하지 않나요? 
+      그렇다면 이 도구는 당신을 위해 만들어졌습니다!
   Tsunami:
-    name: <bold><blue>Tsunami
+    name: <bold><blue>쓰나미
     Description: |-
-      TSUNAMI!
-      Run for your life!
+      쓰나미닷!!
+      살려면 도망쳐랏!
   Rocket:
-    name: <bold><dark_red>Rocket
-    Not-Enough-Space: <prefix> <bold><red>Not enough space around and above you!
-    Not-On-Ground: <prefix> <bold><red>You must be on the ground!
-    Takeoff: <bold><dark_red>TAKEOFF!!
-    LaunchAborted: <bold><red>Launch aborted!
-    Description: Houston, we have a problem...
+    name: <bold><dark_red>로켓
+    Not-Enough-Space: <prefix> <bold><red>주변과 위쪽에 공간이 부족합니다!
+    Not-On-Ground: <prefix> <bold><red>당신은 지상에 있어야합니다!
+    Takeoff: <bold><dark_red>이륙입네다!!
+    LaunchAborted: <bold><red>발사가 중단되었습네다!
+    Description: 휴스턴, 우리에게 문제가 생겼다...
   BlackHole:
-    name: <bold><dark_blue>Black Hole
-    Description: You should not get caught by it!
+    name: <bold><dark_blue>블랙홀
+    Description: 그것에 사로잡히면 안 됩니다!
   TNT:
-    name: <bold><dark_red>T</dark_red><white>N</white><dark_red>T
+    name: <bold><dark_red>T</dark_red><white>N</white><dark_red>T 폭발!
     Description: |-
-      Blow some people up!
-      KABOOM!
+      사람들 좀 날려버려! 
+      카붐!
   FunGun:
-    name: <bold><gold>Fun Gun
-    Description: Woow! So much fun in a gun!
+    name: <bold><gold>장난감 총
+    Description: 귀여운 장난감총이넹
   Parachute:
     name: <bold><white>Parachute
     Description: GERONIMOOO!
