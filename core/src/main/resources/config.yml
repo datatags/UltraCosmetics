@@ -554,3 +554,7 @@ Cosmetics-Affect-Entities: true
 Item-Delay:
   Join: 1
   World-Change-Or-Respawn: 0
+
+# Whether UC should always unequip/reequip cosmetics when changing worlds.
+# Enable this if you use MV-Inventories or a similar plugin.
+Always-Update-Cosmetics-On-World-Change: false

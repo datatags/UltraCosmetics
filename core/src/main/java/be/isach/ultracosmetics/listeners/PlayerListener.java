@@ -47,6 +47,7 @@ public class PlayerListener implements Listener {
     private final int menuItemSlot = SettingsManager.getConfig().getInt("Menu-Item.Slot");
     private final long joinItemDelay = SettingsManager.getConfig().getLong("Item-Delay.Join", 1);
     private final long respawnItemDelay = SettingsManager.getConfig().getLong("Item-Delay.World-Change-Or-Respawn", 0);
+    private final boolean updateOnWorldChange = SettingsManager.getConfig().getBoolean("Always-Update-Cosmetics-On-World-Change", false);
 
     public PlayerListener(UltraCosmetics ultraCosmetics) {
         this.ultraCosmetics = ultraCosmetics;
@@ -95,8 +96,9 @@ public class PlayerListener implements Listener {
             if (menuItemEnabled && event.getPlayer().hasPermission("ultracosmetics.receivechest")) {
                 Bukkit.getScheduler().runTaskLater(ultraCosmetics, up::giveMenuItem, respawnItemDelay);
             }
-            // If the player joined an allowed world from a non-allowed world, re-equip their cosmetics.
-            if (!SettingsManager.isAllowedWorld(event.getFrom())) {
+            // If the player joined an allowed world from a non-allowed world
+            // or we need to update their cosmetics for another reason, re-equip their cosmetics.
+            if (!SettingsManager.isAllowedWorld(event.getFrom()) || updateOnWorldChange) {
                 Bukkit.getScheduler().runTaskLater(ultraCosmetics, () -> up.getProfile().equip(), respawnItemDelay);
             }
         }
@@ -106,7 +108,7 @@ public class PlayerListener implements Listener {
     @EventHandler(priority = EventPriority.LOWEST)
     public void onWorldChangeEarly(final PlayerChangedWorldEvent event) {
         UltraPlayer ultraPlayer = pm.getUltraPlayer(event.getPlayer());
-        if (!SettingsManager.isAllowedWorld(event.getPlayer().getWorld())) {
+        if (!SettingsManager.isAllowedWorld(event.getPlayer().getWorld()) || updateOnWorldChange) {
             // Disable cosmetics when joining a bad world.
             ultraPlayer.removeMenuItem();
             ultraPlayer.withPreserveEquipped(() -> {
