@@ -109,9 +109,8 @@ public abstract class CosmeticType<T extends Cosmetic<?>> {
         // reducing loading time.
         ALL_PERMISSION.recalculatePermissibles();
 
-        if (GENERATE_MISSING_MESSAGES) {
-            MessageManager.save();
-        }
+        // Always save in case we need to add new custom cosmetics to the messages file
+        MessageManager.save();
         VALUES.forEach((c, l) -> l.forEach(t -> t.setupConfig(SettingsManager.getConfig(), t.getConfigPath())));
         // Reprocess enabled cosmetics now that each cosmetic has added its config options
         updateEnabled();
