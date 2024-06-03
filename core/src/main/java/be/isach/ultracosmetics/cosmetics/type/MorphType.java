@@ -127,7 +127,7 @@ public class MorphType extends CosmeticType<Morph> {
         switch (version) {
             case NEW:
             case v1_20:
-                new MorphType("Sniffer", XMaterial.SNIFFER_EGG, EntityType.SNIFFER, MorphSniffer.class);
+                new MorphType("Sniffer", XMaterial.SNIFFER_EGG, EntityType.SNIFFER, MorphSniffer.class, false);
             case v1_19:
                 new MorphType("Allay", XMaterial.ALLAY_SPAWN_EGG, EntityType.ALLAY, MorphAllay.class);
                 new MorphType("Frog", XMaterial.FROG_SPAWN_EGG, EntityType.FROG, MorphFrog.class, false);
