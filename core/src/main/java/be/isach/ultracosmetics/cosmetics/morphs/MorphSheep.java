@@ -6,7 +6,6 @@ import be.isach.ultracosmetics.player.UltraPlayer;
 import com.cryptomorin.xseries.XSound;
 import me.libraryaddict.disguise.disguisetypes.watchers.SheepWatcher;
 import org.bukkit.DyeColor;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -25,7 +24,6 @@ public class MorphSheep extends MorphLeftClickCooldown {
     }
 
     @Override
-    @EventHandler
     public void onLeftClick(PlayerInteractEvent event) {
         event.setCancelled(true);
         sound.play();
