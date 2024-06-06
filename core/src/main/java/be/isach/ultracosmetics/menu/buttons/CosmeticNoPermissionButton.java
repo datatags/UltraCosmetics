@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CosmeticNoPermissionButton extends CosmeticButton {
@@ -24,7 +25,13 @@ public class CosmeticNoPermissionButton extends CosmeticButton {
         MiniMessage mm = MessageManager.getMiniMessage();
         String rawName = SettingsManager.getConfig().getString("No-Permission.Custom-Item.Name", "");
         this.name = MessageManager.toLegacy(mm.deserialize(rawName, Placeholder.component("cosmetic", cosmeticType.getName())));
-        for (String item : SettingsManager.getConfig().getString("No-Permission.Custom-Item.Lore", "").split("\n")) {
+        List<String> rawLore;
+        if (SettingsManager.getConfig().isList("No-Permission.Custom-Item.Lore")) {
+            rawLore = SettingsManager.getConfig().getStringList("No-Permission.Custom-Item.Lore");
+        } else {
+            rawLore = Arrays.asList(SettingsManager.getConfig().getString("No-Permission.Custom-Item.Lore", "").split("\n"));
+        }
+        for (String item : rawLore) {
             lore.add(MessageManager.toLegacy(mm.deserialize(item)));
         }
     }
