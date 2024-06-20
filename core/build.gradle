@@ -60,7 +60,7 @@ dependencies {
     compileOnly 'de.jeff_media:ChestSortAPI:13.0.0-SNAPSHOT'
     compileOnly 'com.palmergames.bukkit.towny:towny:0.100.3.2'
     library 'com.zaxxer:HikariCP:5.1.0'
-    implementation 'net.wesjd:anvilgui:1.9.4-SNAPSHOT' // CodeMC repo
+    implementation 'net.wesjd:anvilgui:1.9.5-SNAPSHOT' // CodeMC repo
     implementation 'com.github.datatags.MobChipLite:mobchip-bukkit:1.10.4'
     implementation fileTree(dir: '.', include: ['mobchip-*.jar'])
     compileOnly 'com.discordsrv:discordsrv:1.28.0-SNAPSHOT'
