@@ -8,6 +8,7 @@ import be.isach.ultracosmetics.util.ItemFactory;
 import be.isach.ultracosmetics.util.SmartLogger.LogLevel;
 import com.cryptomorin.xseries.XMaterial;
 import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
@@ -33,6 +34,7 @@ public class HatType extends CosmeticType<Hat> {
      */
     private HatType(String texture, String configName) {
         super(Category.HATS, configName, XMaterial.PLAYER_HEAD, Hat.class);
+        Bukkit.getLogger().info("Creating hat:" + configName);
         this.itemStack = ItemFactory.createSkull(texture, HAT_NAME);
         if (GENERATE_MISSING_MESSAGES) {
             MessageManager.addMessage(getConfigPath() + ".Name", configName);

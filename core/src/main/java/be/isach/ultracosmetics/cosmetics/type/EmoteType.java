@@ -8,6 +8,7 @@ import be.isach.ultracosmetics.util.ItemFactory;
 import be.isach.ultracosmetics.util.SmartLogger.LogLevel;
 import com.cryptomorin.xseries.XMaterial;
 import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
@@ -251,6 +252,7 @@ public class EmoteType extends CosmeticType<Emote> {
     }
 
     public void appendTexture(String texture, int count) {
+        Bukkit.getLogger().info("Creating frames " + frames.size() + "-" + (frames.size() + count) + " for emote:" + getConfigName());
         ItemStack stack = ItemFactory.createSkull(texture, ChatColor.DARK_GRAY.toString() + ChatColor.ITALIC + "Emote");
         for (int i = 0; i < count; i++) {
             frames.add(stack);

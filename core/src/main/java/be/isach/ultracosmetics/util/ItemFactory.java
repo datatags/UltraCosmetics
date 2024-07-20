@@ -11,6 +11,7 @@ import com.cryptomorin.xseries.profiles.builder.XSkull;
 import com.cryptomorin.xseries.profiles.objects.Profileable;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -184,10 +185,14 @@ public class ItemFactory {
         return createMenuItem();
     }
 
+    static boolean done = false;
 
     public static ItemStack createSkull(String url, String name) {
         ItemStack head = create(XMaterial.PLAYER_HEAD, name);
-        return XSkull.of(head).profile(Profileable.detect(url)).apply();
+        var profile = XSkull.of(head).profile(Profileable.detect(url));
+        ItemStack stack = profile.apply();
+        Bukkit.getLogger().info("Value: " + profile.getProfileValue());
+        return stack;
     }
 
     public static ItemStack createColouredLeather(Material armourPart, int red, int green, int blue) {
