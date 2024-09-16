@@ -39,7 +39,7 @@ dependencies {
     // https://github.com/JEFF-Media-GbR/Spigot-ChestSortAPI
     compileOnly 'de.jeff_media:ChestSortAPI:13.0.0-SNAPSHOT'
     // https://github.com/TownyAdvanced/Towny
-    compileOnly 'com.palmergames.bukkit.towny:towny:0.100.4.1'
+    compileOnly 'com.palmergames.bukkit.towny:towny:0.100.4.2'
     // https://github.com/brettwooldridge/HikariCP
     library 'com.zaxxer:HikariCP:5.1.0'
     // https://github.com/WesJD/AnvilGUI
