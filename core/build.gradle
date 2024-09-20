@@ -28,7 +28,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
     compileOnly 'com.googlecode.json-simple:json-simple:1.1.1'
     // https://github.com/CryptoMorin/XSeries
-    library 'com.github.cryptomorin:XSeries:11.2.1'
+    library 'com.github.cryptomorin:XSeries:11.2.2'
     //api fileTree(dir: '.', include: ['XSeries-*.jar'])
     // https://github.com/Bastian/bstats-metrics
     implementation 'org.bstats:bstats-bukkit:3.0.3'
