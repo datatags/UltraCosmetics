@@ -41,7 +41,7 @@ dependencies {
     // https://github.com/TownyAdvanced/Towny
     compileOnly 'com.palmergames.bukkit.towny:towny:0.100.4.3'
     // https://github.com/brettwooldridge/HikariCP
-    library 'com.zaxxer:HikariCP:5.1.0'
+    library 'com.zaxxer:HikariCP:6.0.0'
     // https://github.com/WesJD/AnvilGUI
     implementation 'net.wesjd:anvilgui:1.10.2-SNAPSHOT'
     // https://github.com/datatags/MobChipLite
