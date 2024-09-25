@@ -15,7 +15,7 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Check out Git repository
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.0
 
       # https://github.com/gradle/gradle-build-action
       - name: Setup Gradle
