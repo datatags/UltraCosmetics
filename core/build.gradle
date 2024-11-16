@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.github.datatags.MobChipLite:mobchip-bukkit:master-SNAPSHOT'
     //implementation fileTree(dir: '.', include: ['mobchip-*.jar'])
     // https://github.com/DiscordSRV/DiscordSRV
-    compileOnly 'com.discordsrv:discordsrv:1.28.1'
+    compileOnly 'com.discordsrv:discordsrv:1.29.0'
     // https://github.com/SoKnight/PEconomy
     compileOnly 'me.soknight:peconomy:2.7.4-pre1'
     // https://github.com/KyoriPowered/adventure
