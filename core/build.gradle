@@ -44,7 +44,7 @@ dependencies {
     // https://github.com/WesJD/AnvilGUI
     implementation 'net.wesjd:anvilgui:1.10.4-SNAPSHOT'
     // https://github.com/datatags/MobChipLite
-    implementation 'com.github.datatags.MobChipLite:mobchip-bukkit:1.10.8'
+    implementation 'com.github.datatags.MobChipLite:mobchip-bukkit:1.10.9'
     //implementation fileTree(dir: '.', include: ['mobchip-*.jar']) // keep for testing purposes
     // https://github.com/DiscordSRV/DiscordSRV
     compileOnly 'com.discordsrv:discordsrv:1.29.0'
